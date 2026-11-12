@@ -58,7 +58,7 @@ Specs en `docs/specs/NNN-nombre-corto/`. Procedimientos en `docs/ai/workflows/`.
 - Lógica en el DOM: filtrar, formatear o calcular va en funciones puras (`shared/utils/`, `state.js`) con test.
 - Textos visibles fuera de su único lugar (el HTML en inglés; las traducciones en `src/i18n/`).
 - Crear carpetas fuera de la lista cerrada de `docs/ai/architecture.md`.
-- Agregar dependencias, refactorizar código ajeno a la tarea o tocar el legado (`assets/js`, `assets/css`, `index.html`, `portfolio-details.html`) sin que lo pida la spec.
+- Agregar dependencias, refactorizar código ajeno a la tarea o tocar código heredado sin que lo pida la spec.
 - Inventar endpoints, datos, textos, reglas o navegación: se marca como pregunta y se toma la opción conservadora.
 
 ## Convenciones

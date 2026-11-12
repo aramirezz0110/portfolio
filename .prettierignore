@@ -1,7 +1,5 @@
-# Legado: se incorpora en la spec de migración (ver docs/ai/architecture.md)
+# Vendor e imágenes (librerías de terceros copiadas, no se editan)
 assets/
-index.html
-portfolio-details.html
 
 # Generados / dependencias
 node_modules/

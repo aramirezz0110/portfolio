@@ -35,7 +35,7 @@
   --color-text-muted: var(--palette-white-alpha-70);
   --color-accent: var(--palette-green-500);
   --color-accent-hover: var(--palette-green-400);
-  --color-on-accent: var(--palette-white);
+  --color-on-accent: var(--palette-black);
   --color-danger: var(--palette-red-600);
   --color-focus-ring: var(--palette-green-300);
 
@@ -48,9 +48,10 @@
   --font-size-lg: 1.25rem;
   --font-size-xl: 2rem;
   --font-weight-regular: 400;
+  --font-weight-medium: 500;
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
-  --line-height-body: 1.6;
+  --line-height-body: 1.5;
 
   /* Espaciado (escala de 4px) */
   --space-1: 0.25rem;

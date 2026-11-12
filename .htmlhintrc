@@ -10,7 +10,7 @@
   "tagname-lowercase": true,
   "tag-pair": true,
   "tag-self-close": false,
-  "empty-tag-not-self-closed": true,
+  "empty-tag-not-self-closed": false,
   "attr-lowercase": true,
   "attr-value-double-quotes": true,
   "attr-no-duplication": true,

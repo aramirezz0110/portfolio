@@ -12,7 +12,7 @@
     "lint": "npm run lint:js && npm run lint:css && npm run lint:html",
     "lint:js": "eslint .",
     "lint:css": "stylelint \"src/**/*.css\" --allow-empty-input",
-    "lint:html": "htmlhint \"pages/**/*.html\"",
+    "lint:html": "htmlhint index.html \"pages/**/*.html\"",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "test": "vitest run",

@@ -11,7 +11,7 @@ Responde "¿qué puede romperse con este cambio?" y lo convierte en un checklist
 ## Reglas
 
 - Basado en evidencia: cada dependencia con `archivo:línea` (búsqueda de imports, clases CSS, `data-js`, tokens, claves i18n, ids/anchors).
-- Incluir el legado: `index.html`, `portfolio-details.html`, `assets/js/main.js` y `assets/css/style.css` pueden usar clases, ids o anchors afectados.
+- Incluir los estilos globales: `src/styles/base.css` afecta a todas las páginas (enlaces, encabezados, foco) y los tokens de `src/styles/tokens.css` a todo el sitio.
 - Lo que no se puede determinar estáticamente se marca como "verificar a mano".
 
 ## Pasos

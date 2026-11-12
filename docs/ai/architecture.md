@@ -11,7 +11,6 @@ Nadie (persona o IA) crea carpetas fuera de esta lista sin aprobación del dev. 
 pages/                     páginas nuevas: pages/<nombre>.html
 assets/img/                imágenes (nuevas en kebab-case)
 assets/vendor/             librerías de terceros copiadas (no se editan)
-assets/css/, assets/js/    LEGADO (ver abajo)
 scripts/                   scripts de Node para tooling (hooks); nunca código del sitio
 src/core/                  config, http, logger, store base, theme-init
 src/shared/components/     componentes reutilizados por 2+ features
@@ -61,11 +60,7 @@ core/   ──> nada del proyecto salvo core/
 
 ## Legado
 
-Heredado de la plantilla original y **excluido** de lint y Prettier hasta su spec de migración:
-
-- `index.html`, `portfolio-details.html` (tienen `style=""` inline y scripts clásicos).
-- `assets/js/main.js` (IIFE, no ES module).
-- `assets/css/style.css` (colores hex sueltos).
+No queda código heredado de la plantilla original. `index.html` y su JavaScript se migraron en la spec `001-contenido-y-estructura` (comportamiento en `src/features/home/`) y el CSS legado (`assets/css/style.css`) en la `002-tokens-y-estilos`: sus estilos viven en `src/styles/base.css` y `src/features/home/home.css`, solo con tokens. `assets/` queda fuera de lint y Prettier solo porque contiene vendor e imágenes.
 
 Reglas: no se refactoriza legado como efecto colateral de otra tarea. Cuando una spec lo migra, al terminar se quita su exclusión de `.prettierignore` / configs de lint. Sí se puede editar el HTML legado para enlazar CSS o módulos nuevos si la spec lo pide.
 

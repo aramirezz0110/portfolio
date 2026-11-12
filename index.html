@@ -1,930 +1,1138 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-  <title>Arom Mauricio Ramirez Zambrana | Flutter & Unity Developer</title>
-  <meta name="description" content="Flutter and Unity developer from La Paz, Bolivia with 6+ years building cross-platform mobile apps, games and XR experiences. Worked on Wordbox English (1.5M+ downloads).">
-  <meta name="author" content="Arom Mauricio Ramirez Zambrana">
-  <link rel="canonical" href="https://aramirezz0110.github.io/portfolio/">
+    <title>Arom Mauricio Ramirez Zambrana | Flutter &amp; Unity Developer</title>
+    <meta
+      name="description"
+      content="Flutter and Unity developer from La Paz, Bolivia with 6+ years building cross-platform mobile apps, games and XR experiences. Worked on Wordbox English (1.5M+ downloads)."
+    />
+    <meta name="author" content="Arom Mauricio Ramirez Zambrana" />
+    <link rel="canonical" href="https://aramirezz0110.github.io/portfolio/" />
 
-  <!-- Link previews (LinkedIn, WhatsApp, X, Slack...) -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://aramirezz0110.github.io/portfolio/">
-  <meta property="og:title" content="Arom Mauricio Ramirez Zambrana | Flutter & Unity Developer">
-  <meta property="og:description" content="Flutter and Unity developer with 6+ years building cross-platform mobile apps, games and XR experiences.">
-  <meta property="og:image" content="https://aramirezz0110.github.io/portfolio/assets/img/me2.jpg">
-  <meta name="twitter:card" content="summary">
+    <!-- Link previews (LinkedIn, WhatsApp, X, Slack...) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://aramirezz0110.github.io/portfolio/" />
+    <meta property="og:title" content="Arom Mauricio Ramirez Zambrana | Flutter &amp; Unity Developer" />
+    <meta
+      property="og:description"
+      content="Flutter and Unity developer with 6+ years building cross-platform mobile apps, games and XR experiences."
+    />
+    <meta property="og:image" content="https://aramirezz0110.github.io/portfolio/assets/img/me2.jpg" />
+    <meta name="twitter:card" content="summary" />
 
-  <link href="assets/img/favicon2.png" rel="icon">
-  <link href="assets/img/me2.jpg" rel="apple-touch-icon">
+    <link href="assets/img/favicon2.png" rel="icon" />
+    <link href="assets/img/me2.jpg" rel="apple-touch-icon" />
 
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@400;500;600;700&family=Raleway:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
 
-  <link href="assets/css/style.css" rel="stylesheet">
-</head>
+    <link href="src/styles/tokens.css" rel="stylesheet" />
+    <link href="src/styles/themes.css" rel="stylesheet" />
+    <link href="src/styles/base.css" rel="stylesheet" />
+    <link href="src/features/home/home.css" rel="stylesheet" />
+  </head>
 
-<body>
-   
-  <header id="header">
-    <div class="container">
+  <body>
+    <header class="site-header" data-js="site-header">
+      <div class="container site-header__inner">
+        <a class="site-header__brand" href="#hero">Arom Ramirez</a>
 
-      <h1><a href="index.html">Arom Mauricio Ramirez Zambrana</a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a> -->
-      <h2>Hi! I'm a <span>Flutter Developer & Unity Game Developer!</span></h2>
+        <button
+          type="button"
+          class="site-header__toggle"
+          data-js="nav-toggle"
+          aria-controls="site-nav"
+          aria-expanded="false"
+          aria-label="Open menu"
+          data-label-open="Open menu"
+          data-label-close="Close menu"
+          hidden
+        >
+          <i class="bi bi-list site-header__icon--open" aria-hidden="true"></i>
+          <i class="bi bi-x site-header__icon--close" aria-hidden="true"></i>
+        </button>
 
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="nav-link active" href="#header">Home</a></li>
-          <li><a class="nav-link" href="#about">About</a></li>
-          <li><a class="nav-link" href="#resume">Resume</a></li>
-          <li><a class="nav-link" href="#services">Services</a></li>
-          <li><a class="nav-link" href="#portfolio">Portfolio</a></li>
-          <li><a class="nav-link" href="#contact">Contact</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav>
-
-      <div class="social-links">        
-        <a href="https://www.linkedin.com/in/arom-mauricio-ramirez-zambrana-a71024158/" class="linkedin" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin"></i></a>
-        <a href="https://github.com/aramirezz0110" class="github" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i></a>
-        <a href="https://x.com/mau_ramirez666" class="twitter" aria-label="X (Twitter)" target="_blank" rel="noopener noreferrer"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
-        <a href="https://www.youtube.com/channel/UCn8pJ5PdFufjcH8Wa8UEUfA" class="youtube" aria-label="YouTube" target="_blank" rel="noopener noreferrer"><i class="bi bi-youtube"></i></a>
+        <nav id="site-nav" class="site-nav" data-js="site-nav" aria-label="Main">
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#portfolio">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
       </div>
+    </header>
 
-    </div>
-  </header>
-
-  <section id="about" class="about">
-
-    <div class="about-me container">
-
-      <div class="section-title">
-        <h2>About</h2>
-        <p>More about me</p>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-4">
-          <img src="assets/img/me2.jpg" class="img-fluid" alt="Arom Mauricio Ramirez Zambrana">
-        </div>
-        <div class="col-lg-8 pt-4 pt-lg-0 content">
-          <h3>Flutter Developer & Unity Game Developer</h3>
-          <p class="fst-italic">
-            Passionate about video games. I love creating engaging 2D and 3D experiences using Unity Engine.
+    <main>
+      <!-- ======= Hero ======= -->
+      <section id="hero" class="hero">
+        <div class="container section-panel section-panel--transparent">
+          <h1 class="hero__name">Arom Mauricio Ramirez Zambrana</h1>
+          <p class="hero__title"><span>Flutter Developer &amp; Unity Game Developer</span></p>
+          <p class="hero__intro">
+            6+ years building cross-platform mobile apps, games and XR experiences. Currently building fintech products
+            with Flutter at Meru.
           </p>
+
+          <div class="hero__actions">
+            <a class="button" href="#portfolio">View projects</a>
+            <a class="button button--secondary" href="#contact">Contact me</a>
+          </div>
+
+          <div class="social-links">
+            <a
+              href="https://www.linkedin.com/in/arom-mauricio-ramirez-zambrana-a71024158/"
+              aria-label="LinkedIn"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="bi bi-linkedin" aria-hidden="true"></i
+            ></a>
+            <a href="https://github.com/aramirezz0110" aria-label="GitHub" target="_blank" rel="noopener noreferrer"
+              ><i class="bi bi-github" aria-hidden="true"></i
+            ></a>
+            <a href="https://x.com/mau_ramirez666" aria-label="X (Twitter)" target="_blank" rel="noopener noreferrer"
+              ><svg width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+                /></svg
+            ></a>
+            <a
+              href="https://www.youtube.com/channel/UCn8pJ5PdFufjcH8Wa8UEUfA"
+              aria-label="YouTube"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="bi bi-youtube" aria-hidden="true"></i
+            ></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======= About ======= -->
+      <section id="about" class="about">
+        <div class="container section-panel">
+          <div class="section-heading">
+            <h2 class="section-heading__title">About</h2>
+          </div>
+
           <div class="row">
-            <div class="col-lg-6">
-              <ul>                                
-                <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span><a href="tel:+59169792487">+591 69792487</a></span></li>
-                <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>La Paz, Bolivia</span></li>
-                <!-- <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>22</span></li> -->
+            <div class="col-lg-4">
+              <img
+                src="assets/img/me2.jpg"
+                width="1222"
+                height="1222"
+                class="img-fluid"
+                alt="Arom Mauricio Ramirez Zambrana"
+              />
+            </div>
+            <div class="col-lg-8 pt-4 pt-lg-0 about__content">
+              <p>
+                I'm a Flutter Developer with 6+ years of experience building cross-platform mobile apps, games and
+                interactive products. I started with Unity and C#, shipping mobile games, VR training simulations and
+                multiplayer experiences, and today I focus on Flutter, building fintech features such as payments,
+                backend-driven screens and scalable feature-based architectures.
+              </p>
+              <p>
+                I care about clean architecture, performance and maintainable code, and I enjoy working closely with
+                product and design teams in remote environments.
+              </p>
+              <ul class="about__facts">
+                <li class="about__fact">
+                  <i class="about__fact-icon bi bi-chevron-right" aria-hidden="true"></i> <strong>Location:</strong>
+                  <span>La Paz, Bolivia (GMT-4)</span>
+                </li>
+                <li class="about__fact">
+                  <i class="about__fact-icon bi bi-chevron-right" aria-hidden="true"></i> <strong>Languages:</strong>
+                  <span>Spanish (Native), English (C1)</span>
+                </li>
+                <li class="about__fact">
+                  <i class="about__fact-icon bi bi-chevron-right" aria-hidden="true"></i> <strong>Availability:</strong>
+                  <span>Open to remote roles</span>
+                </li>
               </ul>
             </div>
-            <div class="col-lg-6">
-              <ul>
-                
-                <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Bachelor of Systems Engineering</span></li>
-                <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span><a href="mailto:arommramirezz@gmail.com">arommramirezz@gmail.com</a></span></li>
-                <!-- <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li> -->
-              </ul>
-            </div>
-          </div>
-          <p>
-            I’m a Mobile Developer focused on building scalable cross-platform applications with Flutter and Dart, with more than 6 years of professional experience developing applications and interactive products using Unity and C#.
-          <br>
-            My background in Unity gave me a strong foundation in software architecture, performance optimization, modular systems, cross-platform development, debugging, and user-focused product development for Android and iOS. Over the years, I’ve worked on mobile applications, gameplay systems, backend integrations, UI systems, optimization workflows, and scalable technical architectures.
-          <br>
-            Today, my primary focus is Flutter development, where I enjoy creating responsive, maintainable, and high-quality mobile applications. I work with technologies and practices such as Bloc, Provider, REST APIs, Firebase, asynchronous programming, clean architecture, and reusable UI systems.
-          </p>
-        </div>
-      </div>
-
-    </div>
-   
-    <div class="skills container">
-      <div class="section-title">
-        <h2>Core Skills</h2>
-      </div>
-
-      <div class="row skills-content">
-
-        <div class="col-lg-6">
-
-          <div>
-            <span class="skill">
-              <b> Flutter Development</b> <br>              
-            </span>   
-            <ul>
-              <li>Cross-platform mobile application development</li>
-              <li>Flutter & Dart</li>
-              <li>Responsive UI development</li>
-              <li>Custom reusable widgets</li>
-              <li>Navigation & routing</li>
-              <li>Form validation & user flows</li>
-              <li>Mobile-first UI/UX implementation</li>
-            </ul>
-          </div>         
-
-          <div>
-            <span class="skill">
-              <b>State Management & Architecture</b><br>              
-            </span>            
-            <ul>
-              <li>Bloc / Cubit</li>
-              <li>Provider</li>
-              <li>Clean Architecture</li>
-              <li>Modular Architecture</li>
-              <li>Dependency Injection</li>
-              <li>Scalable project structure</li>
-              <li>Event-driven systems</li>
-            </ul>
           </div>
 
-          <div>
-            <span class="skill">
-              <b>Backend & Integrations</b><br>              
-            </span>            
-            <ul>
-              <li>REST API integration</li>
-              <li>JSON serialization</li>
-              <li>Firebase services</li>
-              <li>Authentication systems</li>
-              <li>Async programming</li>
-              <li>Local storage & persistence</li>
-              <li>Third-party SDK integration</li>
-            </ul>
-          </div>
-
-          <div>
-            <span class="skill">
-              <b>Mobile Engineering</b><br>
-            </span>  
-            <ul>
-              <li>Android & iOS development workflows</li>
-              <li>Mobile performance optimization</li>
-              <li>Debugging & profiling</li>
-              <li>Release & deployment processes</li>
-              <li>QA & testing practices</li>
-              <li>Git workflows & code reviews</li>
-              <li>Agile/Scrum collaboration</li>
-            </ul>          
-          </div>
-
-          <div>
-            <span class="skill">
-              <b>Unity & Interactive Development</b><br>
-            </span>            
-            <ul>
-              <li>6+ years of Unity development experience</li>
-              <li>Cross-platform application development</li>
-              <li>C# programming</li>
-              <li>Gameplay systems architecture</li>
-              <li>Performance optimization</li>
-              <li>UI systems & interactive experiences</li>
-              <li>Multiplayer and modular systems</li>
-            </ul>
-          </div>
-
-          <div>
-            <span class="skill">
-              <b>Tools & Technologies</b><br>
-            </span>            
-            <ul>
-              <li>Flutter</li>
-              <li>Dart</li>
-              <li>Unity</li>
-              <li>C#</li>
-              <li>Firebase</li>
-              <li>Git & GitHub</li>
-              <li>Android Studio</li>
-              <li>VS Code</li>
-              <li>PlayFab</li>
-              <li>REST APIs</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="col-lg-6">
-          <!-- <div class="progress">
-            <span class="skill">Game Design</span>
-            
-          </div>
-
-          <div class="progress">
-            <span class="skill">Firebase </span>            
-          </div>
-
-          <div class="progress">
-            <span class="skill">Git </span>            
-          </div>
-
-          <div class="progress">
-            <span class="skill">Googling </span>            
-          </div> -->
-
-        </div>
-
-      </div>
-
-    </div>
-
-    <div class="interests container">
-
-      <div class="section-title">
-        <h2>Interests</h2>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-3 col-md-4">
-          <div class="icon-box">
-            <i class="ri-file-list-3-line" style="color: #ffbb2c;"></i>
-            <h3>Flutter & Cross-Platform Mobile Development</h3>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
-          <div class="icon-box">
-            <i class="ri-file-list-3-line" style="color: #5578ff;"></i>
-            <h3>Mobile UI/UX Design</h3>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
-          <div class="icon-box">
-            <i class="ri-file-list-3-line" style="color: #e80368;"></i>
-            <h3>Scalable Mobile Architecture</h3>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 mt-4 mt-lg-0">
-          <div class="icon-box">
-            <i class="ri-file-list-3-line" style="color: #e361ff;"></i>
-            <h3>Fintech & Digital Financial Products</h3>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 mt-4">
-          <div class="icon-box">
-            <i class="ri-file-list-3-line" style="color: #47aeff;"></i>
-            <h3>Blockchain, Wallets & Stablecoins</h3>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 mt-4">
-          <div class="icon-box">
-            <i class="ri-file-list-3-line" style="color: #ffa76e;"></i>
-            <h3>Performance Optimization</h3>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 mt-4">
-          <div class="icon-box">
-            <i class="ri-file-list-3-line" style="color: #11dbcf;"></i>
-            <h3>Clean Code & Software Engineering Best Practices</h3>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 mt-4">
-          <div class="icon-box">
-            <i class="ri-file-list-3-line" style="color: #65cb36;"></i>
-            <h3>API Design & Backend Integrations</h3>
-          </div>
-        </div>   
-        <div class="col-lg-3 col-md-4 mt-4">
-          <div class="icon-box">
-            <i class="ri-file-list-3-line" style="color: #e47f0b;"></i>
-            <h3>AI-Assisted Development & Automation</h3>
-          </div>
-        </div>    
-        <div class="col-lg-3 col-md-4 mt-4">
-          <div class="icon-box">
-            <i class="ri-file-list-3-line" style="color: #e80368;"></i>
-            <h3>Multiplayer & Real-Time Systems</h3>
-          </div>
-        </div> 
-        <div class="col-lg-3 col-md-4 mt-4">
-          <div class="icon-box">
-            <i class="ri-file-list-3-line" style="color: #4233ff;"></i>
-            <h3>Virtual Reality (VR), Augmented Reality (AR) & Mixed Reality (MR)</h3>
-          </div>
-        </div> 
-        <div class="col-lg-3 col-md-4 mt-4">
-          <div class="icon-box">
-            <i class="ri-file-list-3-line" style="color: #ffbb2c;"></i>
-            <h3>Game Systems Design & Interactive Experiences</h3>
-          </div>
-        </div>   
-      </div>
-    </div> 
-  </section>
-
-  <section id="resume" class="resume">
-    <div class="container">
-
-      <div class="section-title">
-        <h2>Resume</h2>
-        <p>Check My Resume</p>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-6">
-          <h3 class="resume-title">Summary</h3>
-          <div class="resume-item pb-0">
-            <h4>Arom Mauricio Ramirez Zambrana</h4>
-            <p><em>I’m a Mobile Developer focused on building scalable cross-platform applications with Flutter and Dart, with more than 6 years of professional experience developing applications and interactive products using Unity and C#.
-                  My background in Unity gave me a strong foundation in software architecture, performance optimization, modular systems, cross-platform development, debugging, and user-focused product development for Android and iOS. Over the years, I’ve worked on mobile applications, gameplay systems, backend integrations, UI systems, optimization workflows, and scalable technical architectures.
-                  Today, my primary focus is Flutter development, where I enjoy creating responsive, maintainable, and high-quality mobile applications. I work with technologies and practices such as Bloc, Provider, REST APIs, Firebase, asynchronous programming, clean architecture, and reusable UI systems.
-            </em></p>
-            <p>
-            <ul>
-              <li>La Paz, Bolivia</li>
-              <li><a href="tel:+59169792487">+591 69792487</a></li>
-              <li><a href="mailto:arommramirezz@gmail.com">arommramirezz@gmail.com</a></li>
-            </ul>
-            </p>
-          </div>
-
-          <h3 class="resume-title">Education</h3>
-          <div class="resume-item">
-            <h4>Bachelor of Systems Engineering</h4>
-            <h5>2017 - 2021</h5>
-            <p><em>Military School of Engineering - EMI, La Paz, Bolivia</em></p>            
-          </div>
-          <h3 class="resume-title">Certificates</h3>
-          <div class="resume-item">
-            <br>
-            <li>Master in Video Game Programming with Unity® 2021 and C# - Udemy</li>        
-            <li>Multiplayer Virtual Reality (VR) Development With Unity - Udemy</li>
-            <li>Master in Augmented Reality with Unity ® 2021 - Udemy</li>
-            <li>Build Multiplayer Games With Unity And Photon PUN 2 - Udemy</li>
-            <li>Design Patterns for Game Programming - Udemy</li>
-            <li>UX Design: User Experience UX / UI + Figma - Udemy</li>
-            <li>VR Development Fundamentals With Oculus Quest 2 And Unity - Udemy</li>
-            <li>Expert in Virtual Reality with Unity ® 2019 and Google VR - Udemy</li>
-            <li>EXPERT in Augmented Reality with Unity ® 2019 and Vuforia - Udemy</li>
-            <li>TOTAL C# - Expert Programmer in 28 days - Udemy </li>
-            <li>GIT+GitHub: An entire version control system from scratch -Udemy</li>
-            <li>Firebase on the web: Use backend services from Javascript - Udemy</li>
-          </div>
-          <!-- <div class="resume-item">
-            <h4>English Student</h4>
-            <h5>2022 - Present</h5>
-            <p><em>Bolivian American Center - CBA, La Paz, Bolivia</em></p>            
-          </div> -->
-        </div>
-        <div class="col-lg-6">
-          <h3 class="resume-title">Professional Experience</h3>
-          <div class="resume-item">            
-            <h4>Flutter Developer | Personal Projects & Technical Training</h4>
-            <h5>January 2025 - Present</h5>   
-            <p><b>Responsibilities:</b></p>
-            <p>
-            <ul>
-              <li>Developed cross-platform mobile applications using Flutter and Dart.</li>    
-              <li>Built reusable and responsive UI components following modern mobile design practices.</li>    
-              <li>Implemented state management solutions using Bloc and Provider.</li>    
-              <li>Consumed REST APIs and managed asynchronous application flows.</li>   
-              <li>Worked with authentication flows, form validation, local storage, and API-driven applications.</li>    
-              <li>Applied clean architecture concepts and modular project organization.</li>    
-              <li>Focused on mobile performance optimization and smooth user experience.</li>    
-              <li>Implemented navigation systems, reusable widgets, and scalable application structures.</li>
-              <li>Used Git workflows including branches, pull requests, and collaborative development practices.</li>    
-              <li>Explored automated testing practices including unit and widget testing.</li>    
-              <li>Worked with Firebase services and backend integrations.</li>    
-              <li>Continuously studied Flutter best practices, architecture patterns, and production-ready mobile workflows.</li>                        
-            </ul>
-            </p>
-          </div>
-
-          <div class="resume-item">
-            <h4>Flutter Developer</h4>
-            <p><em>Wireframe Reality S.A.S. (Remote, Ecuador)</em></p>
-            <h5>July  2022 - October 2022</h5>                        
-            <p>
-            <ul>
-              <li>Developed and maintained cross-platform mobile applications using Flutter and Dart for Android and iOS.</li>
-              <li>Implemented scalable and reusable UI components following product requirements and responsive design principles.</li>
-              <li>Worked with Bloc and Provider for application state management and scalable architecture.</li>
-              <li>Consumed REST APIs and integrated asynchronous data flows for real-time and dynamic application features.</li>
-              <li>Participated in feature development, bug fixing, refactoring, and continuous product improvements.</li>
-              <li>Implemented authentication flows, form validation, local persistence, and user-focused mobile interactions.</li>
-              <li>Optimized application performance, UI responsiveness, and mobile user experience across multiple devices.</li>
-              <li>Participated in Git workflows, pull requests, code reviews, and collaborative development processes.</li>
-              <li>Contributed to maintaining clean architecture practices and reusable project structures.</li>
-              <li>Worked in a fully remote environment with clear communication and task ownership.</li>
-            </ul>
-            </p>
-          </div>
-
-          <div class="resume-item">            
-            <h4>Mobile Developer | Unity & Cross-Platform Development</h4>
-            <h5>January 2020 - Present</h5>
-            <p><b>Responsibilities:</b></p>
-            <p>
-            <ul>
-              <li>Developed mobile applications and games for Android and iOS using Unity and C#.</li>    
-              <li>Built scalable and reusable systems with strong emphasis on maintainability.</li>
-              <li>Integrated APIs, backend services, authentication systems, and cloud features.</li>    
-              <li>Optimized mobile applications focusing on performance, memory usage, and user experience.</li>
-              <li>Worked with mobile deployment processes and Android platform configurations.</li>    
-              <li>Collaborated using Git workflows and participated in debugging and feature implementation.</li>
-              <li>Built UI systems and interactive mobile experiences.</li>    
-              <li>Worked on modular architecture and event-driven systems.</li>
-            </ul>
-            </p>
-          </div>
-          
-          <div class="resume-item">            
-            <h4>Unity Game Developer / Mobile Developer</h4>
-            <p><em>Wordbox English (Remote, Mexico)</em></p>
-            <h5>June 2023 - Dec 2025</h5>            
-              <p><b>Achievements:</b></p>
-            <p>
-            <ul>
-              <li>1.5M+ downloads, 125K MAU, active in 120 countries, generating $1M+ annualized revenue.</li>                            
-              <li>Rated 4.9/5.0 stars across major markets.</li>            
-            </ul>
-            </p>
-            <p><b>Responsibilities:</b></p>
-            <p>
-            <ul>
-              <li>Worked as a mid–senior Unity developer on a consumer mobile application with 1.5M+ downloads, 125k MAU, and users across 120+ countries.</li>
-              <li>Owned the development and maintenance of key features, including an infinite content carousel module, level-up animations, and a streak-protection system.</li>  
-              <li>Refactored existing systems to improve scalability, maintainability, and performance in a growing production codebase.</li>
-              <li>Integrated REST APIs and collaborated with backend services to support dynamic content generation.</li>
-              <li>Worked daily with product managers and designers to translate product requirements into technical implementations; collaborated weekly with backend developers.</li>
-              <li>Addressed mobile-specific challenges, including memory constraints, app size optimization, and resolving App Store and Google Play rejections.</li>
-              <li>Implemented UI systems and animations in Unity to improve engagement and accessibility across a wide range of devices.</li>
-              <li>Participated in code reviews and technical discussions to maintain long-term code quality and stability.</li>  
-            </ul>
-            </p>
-          </div>
-
-          <div class="resume-item">
-            <h4>Unity Developer</h4>
-            <p><em>IbisDev (Remote, France)</em></p>
-            <h5>June 2023 - October 2023</h5>
-            <p>
-            <ul>
-              <li>Contributed to a production Unity project focused on interactive 3D animations.</li>
-              <li>Redesigned the animation integration pipeline for an existing project, improving asset management and runtime behavior.</li>
-              <li>Integrated new 3D assets and updated UI elements to align with revised design requirements.</li>
-              <li>Fixed legacy issues and stabilized features implemented by previous developers.</li>
-            </ul>
-            </p>
-          </div>
-
-          <div class="resume-item">
-            <h4>Unity XR Developer</h4>
-            <p><em>Shokworks Inc. (Remote, United States)</em></p>
-            <h5>August 2022 - February 2023</h5>            
-            <p>
-            <ul>
-              <li>Developed and optimized a VR training simulation for educational use, rebuilding and improving a previous project version.</li>
-              <li>Achieved up to 30% FPS improvement and 50% faster load times by reducing draw calls, restructuring scenes, and optimizing runtime scripts.</li>
-              <li>Performed targeted profiling and optimization to ensure stable performance on Meta Quest 2.</li>
-              <li>Delivered production-ready XR builds with consistent device compatibility.</li>
-            </ul>
-            </p>
-          </div>
-          
-          
-
-          <div class="resume-item">
-            <h4>Unity Game Developer</h4>
-            <p><em>Xiara Studios (Remote, Bolivia)</em></p>
-            <h5>January 2021 - June 2022</h5>            
-            <p>
-            <ul>
-              <li>Developed a commercial multiplayer game with integrated voice chat.</li>
-              <li>Built smartphone-based VR demos, including architectural walkthrough experiences.</li>
-              <li>Created early prototypes for 2D platformer games.</li>
-              <li>Gained first professional experience delivering commercial multiplayer and VR projects, including trade-show demos.</li>
-            </ul>
-            </p>
-          </div>          
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <section id="services" class="services">
-    <div class="container">
-
-      <div class="section-title">
-        <h2>Services</h2>
-        <p>My Services</p>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-          <div class="icon-box">
-            <!-- <div class="icon"><i class="bx bx-slideshow"></i></div> -->
-            <h4>Flutter Mobile Development</h4>
-            <p>Development of cross-platform mobile applications using Flutter and Dart for Android and iOS. <br>
-              Includes: responsive UI implementation, reusable widgets, API integration, authentication flows, local storage, and scalable app architecture.</p>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
-          <div class="icon-box">
-            <!-- <div class="icon"><i class="bx bx-slideshow"></i></div> -->
-            <h4>Mobile UI/UX Implementation</h4>
-            <p>Creation of modern, user-focused mobile interfaces with emphasis on responsiveness, usability, and smooth user experience. <br>
-              Includes: custom widgets, animations, navigation systems, onboarding flows, and adaptive layouts.</p>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
-          <div class="icon-box">
-            <!-- <div class="icon"><i class="bx bx-slideshow"></i></div> -->
-            <h4>State Management & App Architecture</h4>
-            <p>Implementation of scalable application structures using modern Flutter architecture patterns. <br>
-              Includes: Bloc, Cubit, Provider, clean architecture, modular systems, dependency injection, and maintainable code organization.</p>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-          <div class="icon-box">
-            <!-- <div class="icon"><i class="bx bx-slideshow"></i></div> -->
-            <h4>API & Backend Integration</h4>
-            <p>Integration of REST APIs and cloud services for dynamic mobile applications. <br>
-              Includes: asynchronous programming, JSON serialization, Firebase integration, authentication systems, and backend-connected features.</p>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-          <div class="icon-box">
-            <!-- <div class="icon"><i class="bx bx-slideshow"></i></div> -->
-            <h4>Firebase & Cloud Features</h4>
-            <p>Setup and integration of Firebase services for mobile applications. <br>
-              Includes: Authentication, Firestore, Realtime Database, Cloud Messaging, Analytics, and backend-driven mobile functionality.</p>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-          <div class="icon-box">
-            <!-- <div class="icon"><i class="bx bx-slideshow"></i></div> -->
-            <h4>Unity Game & Interactive Development</h4>
-            <p>Full-cycle development of interactive applications and games using Unity and C#. <br>
-              Includes: gameplay systems, UI implementation, optimization, mobile deployment, modular architecture, and cross-platform experiences.</p>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-          <div class="icon-box">
-            <!-- <div class="icon"><i class="bx bx-slideshow"></i></div> -->
-            <h4>XR (VR/AR/MR) Development</h4>
-            <p>Design and development of immersive XR experiences for mobile and standalone platforms. <br>
-              Includes: AR Foundation, ARCore, ARKit, Vuforia integration, spatial interactions, and real-time interactive systems.</p>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-          <div class="icon-box">
-            <!-- <div class="icon"><i class="bx bx-slideshow"></i></div> -->
-            <h4>Multiplayer & Real-Time Systems</h4>
-            <p>Implementation of multiplayer and synchronized systems for games and interactive applications. <br>
-              Includes: Photon integration, networking architecture, matchmaking systems, real-time synchronization, and backend communication.</p>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-          <div class="icon-box">
-            <!-- <div class="icon"><i class="bx bx-slideshow"></i></div> -->
-            <h4>Performance Optimization</h4>
-            <p>Optimization of mobile and interactive applications to ensure stable and efficient performance across devices. <br>
-              Includes: memory optimization, FPS improvements, loading time reduction, asset management, and profiling workflows.</p>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-          <div class="icon-box">
-            <!-- <div class="icon"><i class="bx bx-slideshow"></i></div> -->
-            <h4>Technical Prototyping & MVP Development</h4>
-            <p>Rapid development of prototypes, MVPs, and proof-of-concept applications for startups and product validation. <br>
-              Includes: architecture planning, SDK integration, scalable foundations, and iterative development.</p>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-          <div class="icon-box">
-            <!-- <div class="icon"><i class="bx bx-slideshow"></i></div> -->
-            <h4>Mobile Deployment & Release Management</h4>
-            <p>Preparation and deployment of mobile applications for Android and iOS environments. <br>
-              Includes: release builds, store preparation, platform configuration, debugging, and production-ready optimization.</p>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-          <div class="icon-box">
-            <!-- <div class="icon"><i class="bx bx-slideshow"></i></div> -->
-            <h4>Freelance & Remote Collaboration</h4>
-            <p>Flexible collaboration for startups, studios, and product teams in remote environments. <br>
-              Includes: agile workflows, Git collaboration, code reviews, technical communication, and long-term or project-based development support.</p>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <section id="portfolio" class="portfolio">
-    <div class="container">
-
-      <div class="section-title">
-        <h2>Portfolio</h2>
-        <p>My Works</p>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-12 d-flex justify-content-center">
-          <ul id="portfolio-flters">
-            <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-unity3d">Unity 3D</li>
-            <li data-filter=".filter-unity2d">Unity 2D</li>
-            <li data-filter=".filter-unityVrAr">Unity VR - AR</li>            
+          <ul class="stats">
+            <li class="stats__item">
+              <span class="stats__value">6+</span> <span class="stats__label">Years of experience</span>
+            </li>
+            <li class="stats__item">
+              <span class="stats__value">1.5M+</span> <span class="stats__label">Downloads</span>
+            </li>
+            <li class="stats__item">
+              <span class="stats__value">120+</span> <span class="stats__label">Countries reached</span>
+            </li>
+            <li class="stats__item">
+              <span class="stats__value">4.9★</span> <span class="stats__label">App store rating</span>
+            </li>
           </ul>
         </div>
-      </div>
+      </section>
 
-      <div class="row portfolio-container">
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-unity3d">
-          <div class="portfolio-wrap">
-            <img src="assets/img/portfolio/RollABallScene.png" class="img-fluid" alt="Roll a Ball screenshot">
-            <div class="portfolio-info">
-              <h4>Roll a Ball</h4>
-              <p>Unity 3D</p>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/RollABallScene.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="3D scene where the player is a ball"><i class="bx bx-plus"></i></a>
-                <a href="https://github.com/aramirezz0110/RollABall" target="_blank" rel="noopener noreferrer"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
+      <!-- ======= Experience ======= -->
+      <section id="experience" class="resume">
+        <div class="container section-panel">
+          <div class="section-heading">
+            <h2 class="section-heading__title">Experience</h2>
           </div>
+
+          <article class="resume-item">
+            <h3 class="resume-item__title">Flutter Developer</h3>
+            <p class="resume-item__company">Meru · Remote, United States</p>
+            <p class="resume-item__date">Jun 2026 – Present</p>
+            <p class="resume-item__summary">Global financial transactions platform.</p>
+            <ul>
+              <li>
+                Build end-to-end payment and money movement features, including stablecoin wallet flows and third-party
+                provider integrations.
+              </li>
+              <li>Develop dynamic, backend-driven forms and screens.</li>
+              <li>Help migrate legacy code to a feature-based architecture and adopt a centralized design system.</li>
+              <li>Roll out features safely using feature flags and remote configuration.</li>
+              <li>Improve app maintainability through refactoring and technical debt cleanup.</li>
+              <li>Use AI-assisted development tools (Claude Code, Cursor) in daily engineering workflows.</li>
+            </ul>
+          </article>
+
+          <article class="resume-item">
+            <h3 class="resume-item__title">Flutter Developer</h3>
+            <p class="resume-item__company">Independent · Remote</p>
+            <p class="resume-item__date">Jan 2025 – Present</p>
+            <ul>
+              <li>
+                Built cross-platform Flutter applications using Bloc and Provider for state management, REST API
+                integration and Firebase services.
+              </li>
+              <li>
+                Implemented authentication flows, form validation, local storage and navigation in API-driven apps.
+              </li>
+              <li>
+                Applied clean architecture and modular project structures with reusable, responsive UI components.
+              </li>
+              <li>Practiced unit and widget testing and Git workflows with branches and pull requests.</li>
+            </ul>
+          </article>
+
+          <article class="resume-item">
+            <h3 class="resume-item__title">Mid-Senior Unity Developer</h3>
+            <p class="resume-item__company">Wordbox English · Remote, Mexico</p>
+            <p class="resume-item__date">Jun 2023 – Dec 2025</p>
+            <ul>
+              <li>
+                Developed and maintained features for a consumer English-learning app with 1.5M+ downloads, 125K MAU,
+                users in 120+ countries, $1M+ annualized revenue and a 4.9/5 rating.
+              </li>
+              <li>
+                Owned key features including an infinite content carousel, level-up animations and a streak-protection
+                system.
+              </li>
+              <li>
+                Refactored existing systems to improve scalability, maintainability and performance in a growing
+                production codebase.
+              </li>
+              <li>Integrated REST APIs with backend services to support dynamic content generation.</li>
+              <li>
+                Solved mobile constraints including memory limits, app size optimization, and App Store and Google Play
+                rejections.
+              </li>
+              <li>
+                Collaborated daily with product managers and designers and weekly with backend developers; participated
+                in code reviews.
+              </li>
+            </ul>
+          </article>
+
+          <article class="resume-item">
+            <h3 class="resume-item__title">Unity Developer</h3>
+            <p class="resume-item__company">IbisDev · Remote, France</p>
+            <p class="resume-item__date">Jun 2023 – Oct 2023</p>
+            <ul>
+              <li>
+                Redesigned the animation integration pipeline of a production Unity project focused on interactive 3D
+                animations, improving asset management and runtime behavior.
+              </li>
+              <li>Integrated new 3D assets and updated UI elements to match revised design requirements.</li>
+              <li>Fixed legacy issues and stabilized features implemented by previous developers.</li>
+            </ul>
+          </article>
+
+          <article class="resume-item">
+            <h3 class="resume-item__title">Unity XR Developer</h3>
+            <p class="resume-item__company">Shokworks Inc. · Remote, United States</p>
+            <p class="resume-item__date">Aug 2022 – Feb 2023</p>
+            <ul>
+              <li>Rebuilt and optimized a VR training simulation for educational use on Meta Quest 2.</li>
+              <li>
+                Improved frame rate by up to 30% and load times by 50% by reducing draw calls, restructuring scenes and
+                optimizing runtime scripts.
+              </li>
+              <li>
+                Delivered production-ready XR builds with consistent device compatibility through targeted profiling.
+              </li>
+            </ul>
+          </article>
+
+          <article class="resume-item">
+            <h3 class="resume-item__title">Flutter Developer</h3>
+            <p class="resume-item__company">Wireframe Reality S.A.S. · Remote, Ecuador</p>
+            <p class="resume-item__date">Jul 2022 – Oct 2022</p>
+            <ul>
+              <li>Developed and maintained cross-platform Flutter apps for Android and iOS using Bloc and Provider.</li>
+              <li>Implemented reusable UI components, authentication flows, form validation and local persistence.</li>
+              <li>Integrated REST APIs and asynchronous data flows for dynamic application features.</li>
+              <li>
+                Contributed to feature development, bug fixing, refactoring and code reviews in a fully remote team.
+              </li>
+            </ul>
+          </article>
+
+          <article class="resume-item">
+            <h3 class="resume-item__title">Unity Game Developer</h3>
+            <p class="resume-item__company">Xiara Studios · Remote, Bolivia</p>
+            <p class="resume-item__date">Jan 2021 – Jun 2022</p>
+            <ul>
+              <li>Developed a commercial multiplayer game with integrated voice chat.</li>
+              <li>Built smartphone-based VR demos, including architectural walkthrough experiences for trade shows.</li>
+              <li>Created prototypes for 2D platformer games.</li>
+            </ul>
+          </article>
+
+          <article class="resume-item">
+            <h3 class="resume-item__title">Freelance Mobile Developer (Unity)</h3>
+            <p class="resume-item__company">Freelance · Remote</p>
+            <p class="resume-item__date">Jan 2020 – Present</p>
+            <ul>
+              <li>Develop mobile apps and games for Android and iOS using Unity and C#.</li>
+              <li>Integrate APIs, backend services, authentication and cloud features.</li>
+              <li>Optimize performance, memory usage and user experience, and manage Android builds and deployment.</li>
+            </ul>
+          </article>
         </div>
+      </section>
 
-        <div class="col-lg-4 col-md-6 portfolio-item filter-unityVrAr">
-          <div class="portfolio-wrap">
-            <img src="assets/img/portfolio/architecture-app.jpg" class="img-fluid" alt="Architecture AR screenshot">
-            <div class="portfolio-info">
-              <h4>Architecture AR</h4>
-              <p>Unity AR</p>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/architecture-app.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Showing 3D architecture details using augmented reality with Vuforia."><i class="bx bx-plus"></i></a>
-                <a href="https://github.com/aramirezz0110/UnityArchitectureAR" target="_blank" rel="noopener noreferrer"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-unity2d">
-          <div class="portfolio-wrap">
-            <img src="assets/img/portfolio/SpaceInvadersDemo.png" class="img-fluid" alt="Space Invaders Demo screenshot">
-            <div class="portfolio-info">
-              <h4>Space Invaders Demo</h4>
-              <p>Unity 2D</p>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/SpaceInvadersDemo.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="It's a 2D shooter!"><i class="bx bx-plus"></i></a>
-                <a href="https://github.com/aramirezz0110/SpaceInvadersDemo" target="_blank" rel="noopener noreferrer"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-unityVrAr">
-          <div class="portfolio-wrap">
-            <img src="assets/img/portfolio/360-image-app.jpg" class="img-fluid" alt="360 Image Visualizer screenshot">
-            <div class="portfolio-info">
-              <h4>360 Image Visualizer</h4>
-              <p>Unity VR</p>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/360-image-app.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Show 360 images using VR features."><i class="bx bx-plus"></i></a>
-                <a href="https://github.com/aramirezz0110/UnityGoogleVRExamples.git" target="_blank" rel="noopener noreferrer"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-unityVrAr">
-          <div class="portfolio-wrap">
-            <img src="assets/img/portfolio/art-gallery.jpg" class="img-fluid" alt="Art Gallery screenshot">
-            <div class="portfolio-info">
-              <h4>Art Gallery</h4>
-              <p>Unity VR</p>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/art-gallery.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Explore an art gallery using VR!"><i class="bx bx-plus"></i></a>
-                <a href="https://github.com/aramirezz0110/UnityGoogleVRExamples.git" target="_blank" rel="noopener noreferrer"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-unity3d">
-          <div class="portfolio-wrap">
-            <img src="assets/img/portfolio/FPSZombies.png" class="img-fluid" alt="FPS Zombies screenshot">
-            <div class="portfolio-info">
-              <h4>FPS Zombies</h4>
-              <p>Unity 3D</p>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/FPSZombies.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="FPS Zombies"><i class="bx bx-plus"></i></a>
-                <a href="https://github.com/aramirezz0110/FPSZombies" target="_blank" rel="noopener noreferrer"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-unityVrAr">
-          <div class="portfolio-wrap">
-            <img src="assets/img/portfolio/simple-walking.jpg" class="img-fluid" alt="Simple Walking screenshot">
-            <div class="portfolio-info">
-              <h4>Simple Walking</h4>
-              <p>Unity VR</p>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/simple-walking.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Movement around a 3D environment using VR without controllers"><i class="bx bx-plus"></i></a>
-                <a href="https://github.com/aramirezz0110/UnityGoogleVRExamples.git" target="_blank" rel="noopener noreferrer"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-unity3d">
-          <div class="portfolio-wrap">
-            <img src="assets/img/portfolio/CollectCoins.png" class="img-fluid" alt="Collecting coins and minimap screenshot">
-            <div class="portfolio-info">
-              <h4>Collecting coins and minimap</h4>
-              <p>UNITY 3D</p>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/CollectCoins.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="First person collect items game with minimap"><i class="bx bx-plus"></i></a>
-                <a href="https://github.com/aramirezz0110/CollectCoins" target="_blank" rel="noopener noreferrer"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-unity3d">
-          <div class="portfolio-wrap">
-            <img src="assets/img/portfolio/ZigZagProcedural.png" class="img-fluid" alt="Zig Zag 3D screenshot">
-            <div class="portfolio-info">
-              <h4>Zig Zag 3D</h4>
-              <p>UNITY 3D</p>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/ZigZagProcedural.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Zig Zag 3D with procedural level generation"><i class="bx bx-plus"></i></a>
-                <a href="https://github.com/aramirezz0110/ZigZagProcedural" target="_blank" rel="noopener noreferrer"><i class="bx bx-link"></i></a>
-                <a href="https://www.youtube.com/watch?v=fjWiw7kBsMU" target="_blank" rel="noopener noreferrer"><i class="bx bx-video"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-unity2d">
-          <div class="portfolio-wrap">
-            <img src="assets/img/portfolio/FruitNinja.png" class="img-fluid" alt="Fruit Ninja 2d screenshot">
-            <div class="portfolio-info">
-              <h4>Fruit Ninja 2d</h4>
-              <p>UNITY 2D</p>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/FruitNinja.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Fruit ninja for PC and MOBILE devices"><i class="bx bx-plus"></i></a>
-                <a href="https://github.com/aramirezz0110/FruitNinja" target="_blank" rel="noopener noreferrer"><i class="bx bx-link"></i></a>
-                <a href="https://www.youtube.com/watch?v=GPkWhQk1zd8" target="_blank" rel="noopener noreferrer"><i class="bx bx-video"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        
-        <div class="col-lg-4 col-md-6 portfolio-item filter-unity2d">
-          <div class="portfolio-wrap">
-            <img src="assets/img/portfolio/Pong2D.png" class="img-fluid" alt="Pong Game screenshot">
-            <div class="portfolio-info">
-              <h4>Pong Game</h4>
-              <p>Unity 2D</p>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/Pong2D.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Pong game with PvP and PvM game modes"><i class="bx bx-plus"></i></a>
-                <a href="https://github.com/aramirezz0110/Pong2D" target="_blank" rel="noopener noreferrer"><i class="bx bx-link"></i></a>
-              </div>
-              </div>
-            </div>
+      <!-- ======= Projects ======= -->
+      <section id="portfolio" class="portfolio" data-js="projects">
+        <div class="container section-panel">
+          <div class="section-heading">
+            <h2 class="section-heading__title">Projects</h2>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-unityVrAr">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/SpaceShooterVR.png" class="img-fluid" alt="Space Shooter VR screenshot">
-              <div class="portfolio-info">
-                <h4>Space Shooter VR</h4>
-                <p>Unity VR</p>
-                <div class="portfolio-links">                  
-                  <a href="https://www.youtube.com/watch?v=6WTAoMb1N8g&t=19s" target="_blank" rel="noopener noreferrer"><i class="bx bx-video"></i></a>
-                </div>
-                </div>
-              </div>
-            </div>
+          <div class="project-filters" data-js="project-filters" role="group" aria-label="Filter projects" hidden>
+            <button type="button" class="project-filters__button" data-filter="all" aria-pressed="true">All</button>
+            <button type="button" class="project-filters__button" data-filter="unity-3d" aria-pressed="false">
+              Unity 3D
+            </button>
+            <button type="button" class="project-filters__button" data-filter="unity-2d" aria-pressed="false">
+              Unity 2D
+            </button>
+            <button type="button" class="project-filters__button" data-filter="unity-xr" aria-pressed="false">
+              Unity VR - AR
+            </button>
+          </div>
 
-            <div class="col-lg-4 col-md-6 portfolio-item filter-unityVrAr">
-              <div class="portfolio-wrap">
-                <img src="assets/img/portfolio/MultiplayerVR.png" class="img-fluid" alt="Multiplayer VR screenshot">
-                <div class="portfolio-info">
-                  <h4>Multiplayer VR</h4>
-                  <p>Unity VR</p>
-                  <div class="portfolio-links">                    
-                    <a href="https://www.youtube.com/watch?v=JIMcC8JU5wc" target="_blank" rel="noopener noreferrer"><i class="bx bx-video"></i></a>
+          <div class="row">
+            <article class="col-lg-4 col-md-6 mb-4" data-categories="unity-3d">
+              <div class="project-card">
+                <img
+                  class="project-card__image"
+                  src="assets/img/portfolio/RollABallScene.png"
+                  width="931"
+                  height="498"
+                  alt="Roll a Ball screenshot"
+                  loading="lazy"
+                />
+                <div class="project-card__body">
+                  <h3 class="project-card__title">Roll a Ball</h3>
+                  <p class="project-card__category">Unity 3D</p>
+                  <p class="project-card__description">3D scene where the player controls a ball.</p>
+                  <div class="project-card__links">
+                    <a
+                      class="project-card__link portfolio-lightbox"
+                      href="assets/img/portfolio/RollABallScene.png"
+                      data-gallery="portfolioGallery"
+                      aria-label="Zoom Roll a Ball screenshot"
+                      ><i class="bx bx-plus" aria-hidden="true"></i> Zoom</a
+                    >
+                    <a
+                      class="project-card__link"
+                      href="https://github.com/aramirezz0110/RollABall"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Roll a Ball code on GitHub"
+                      ><i class="bx bx-code-alt" aria-hidden="true"></i> Code</a
+                    >
                   </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="col-lg-4 col-md-6 mb-4" data-categories="unity-xr">
+              <div class="project-card">
+                <img
+                  class="project-card__image"
+                  src="assets/img/portfolio/architecture-app.jpg"
+                  width="1280"
+                  height="576"
+                  alt="Architecture AR screenshot"
+                  loading="lazy"
+                />
+                <div class="project-card__body">
+                  <h3 class="project-card__title">Architecture AR</h3>
+                  <p class="project-card__category">Unity AR</p>
+                  <p class="project-card__description">
+                    Shows 3D architecture details using augmented reality with Vuforia.
+                  </p>
+                  <div class="project-card__links">
+                    <a
+                      class="project-card__link portfolio-lightbox"
+                      href="assets/img/portfolio/architecture-app.jpg"
+                      data-gallery="portfolioGallery"
+                      aria-label="Zoom Architecture AR screenshot"
+                      ><i class="bx bx-plus" aria-hidden="true"></i> Zoom</a
+                    >
+                    <a
+                      class="project-card__link"
+                      href="https://github.com/aramirezz0110/UnityArchitectureAR"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Architecture AR code on GitHub"
+                      ><i class="bx bx-code-alt" aria-hidden="true"></i> Code</a
+                    >
                   </div>
                 </div>
               </div>
+            </article>
 
-              <div class="col-lg-4 col-md-6 portfolio-item filter-unityVrAr">
-                <div class="portfolio-wrap">
-                  <img src="assets/img/portfolio/SwordAndPistolVR.png" class="img-fluid" alt="Sword and Pistol VR screenshot">
-                  <div class="portfolio-info">
-                    <h4>Sword and Pistol VR</h4>
-                    <p>Unity VR</p>
-                    <div class="portfolio-links">                    
-                      <a href="https://www.youtube.com/watch?v=6t8nY7SOzLA" target="_blank" rel="noopener noreferrer"><i class="bx bx-video"></i></a>
-                    </div>
-                    </div>
+            <article class="col-lg-4 col-md-6 mb-4" data-categories="unity-2d">
+              <div class="project-card">
+                <img
+                  class="project-card__image"
+                  src="assets/img/portfolio/SpaceInvadersDemo.png"
+                  width="614"
+                  height="347"
+                  alt="Space Invaders Demo screenshot"
+                  loading="lazy"
+                />
+                <div class="project-card__body">
+                  <h3 class="project-card__title">Space Invaders Demo</h3>
+                  <p class="project-card__category">Unity 2D</p>
+                  <p class="project-card__description">A 2D space shooter.</p>
+                  <div class="project-card__links">
+                    <a
+                      class="project-card__link portfolio-lightbox"
+                      href="assets/img/portfolio/SpaceInvadersDemo.png"
+                      data-gallery="portfolioGallery"
+                      aria-label="Zoom Space Invaders Demo screenshot"
+                      ><i class="bx bx-plus" aria-hidden="true"></i> Zoom</a
+                    >
+                    <a
+                      class="project-card__link"
+                      href="https://github.com/aramirezz0110/SpaceInvadersDemo"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Space Invaders Demo code on GitHub"
+                      ><i class="bx bx-code-alt" aria-hidden="true"></i> Code</a
+                    >
                   </div>
-                </div>                
+                </div>
+              </div>
+            </article>
 
-                  <div class="col-lg-4 col-md-6 portfolio-item filter-unityVrAr">
-                    <div class="portfolio-wrap">
-                      <img src="assets/img/portfolio/AlejandriaPunk.png" class="img-fluid" alt="Alejandria Punk VR screenshot">
-                      <div class="portfolio-info">
-                        <h4>Alejandria Punk VR</h4>
-                        <p>Unity VR</p>
-                        <div class="portfolio-links">                    
-                          <a href="https://www.youtube.com/watch?v=PyGHAf2I-8c" target="_blank" rel="noopener noreferrer"><i class="bx bx-video"></i></a>
-                        </div>
-                        </div>
-                      </div>
-                    </div>
+            <article class="col-lg-4 col-md-6 mb-4" data-categories="unity-xr">
+              <div class="project-card">
+                <img
+                  class="project-card__image"
+                  src="assets/img/portfolio/360-image-app.jpg"
+                  width="1280"
+                  height="576"
+                  alt="360 Image Visualizer screenshot"
+                  loading="lazy"
+                />
+                <div class="project-card__body">
+                  <h3 class="project-card__title">360 Image Visualizer</h3>
+                  <p class="project-card__category">Unity VR</p>
+                  <p class="project-card__description">Displays 360° images using VR.</p>
+                  <div class="project-card__links">
+                    <a
+                      class="project-card__link portfolio-lightbox"
+                      href="assets/img/portfolio/360-image-app.jpg"
+                      data-gallery="portfolioGallery"
+                      aria-label="Zoom 360 Image Visualizer screenshot"
+                      ><i class="bx bx-plus" aria-hidden="true"></i> Zoom</a
+                    >
+                    <a
+                      class="project-card__link"
+                      href="https://github.com/aramirezz0110/UnityGoogleVRExamples"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="360 Image Visualizer code on GitHub"
+                      ><i class="bx bx-code-alt" aria-hidden="true"></i> Code</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </article>
 
-        </div>    
-      </div>
-    </div>
-  </section>
+            <article class="col-lg-4 col-md-6 mb-4" data-categories="unity-xr">
+              <div class="project-card">
+                <img
+                  class="project-card__image"
+                  src="assets/img/portfolio/art-gallery.jpg"
+                  width="1280"
+                  height="576"
+                  alt="Art Gallery screenshot"
+                  loading="lazy"
+                />
+                <div class="project-card__body">
+                  <h3 class="project-card__title">Art Gallery</h3>
+                  <p class="project-card__category">Unity VR</p>
+                  <p class="project-card__description">Explore an art gallery in VR.</p>
+                  <div class="project-card__links">
+                    <a
+                      class="project-card__link portfolio-lightbox"
+                      href="assets/img/portfolio/art-gallery.jpg"
+                      data-gallery="portfolioGallery"
+                      aria-label="Zoom Art Gallery screenshot"
+                      ><i class="bx bx-plus" aria-hidden="true"></i> Zoom</a
+                    >
+                    <a
+                      class="project-card__link"
+                      href="https://github.com/aramirezz0110/UnityGoogleVRExamples"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Art Gallery code on GitHub"
+                      ><i class="bx bx-code-alt" aria-hidden="true"></i> Code</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </article>
 
-  <section id="contact" class="contact">
-    <div class="container">
+            <article class="col-lg-4 col-md-6 mb-4" data-categories="unity-3d">
+              <div class="project-card">
+                <img
+                  class="project-card__image"
+                  src="assets/img/portfolio/FPSZombies.png"
+                  width="712"
+                  height="402"
+                  alt="FPS Zombies screenshot"
+                  loading="lazy"
+                />
+                <div class="project-card__body">
+                  <h3 class="project-card__title">FPS Zombies</h3>
+                  <p class="project-card__category">Unity 3D</p>
+                  <p class="project-card__description">First-person zombie shooter.</p>
+                  <div class="project-card__links">
+                    <a
+                      class="project-card__link portfolio-lightbox"
+                      href="assets/img/portfolio/FPSZombies.png"
+                      data-gallery="portfolioGallery"
+                      aria-label="Zoom FPS Zombies screenshot"
+                      ><i class="bx bx-plus" aria-hidden="true"></i> Zoom</a
+                    >
+                    <a
+                      class="project-card__link"
+                      href="https://github.com/aramirezz0110/FPSZombies"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="FPS Zombies code on GitHub"
+                      ><i class="bx bx-code-alt" aria-hidden="true"></i> Code</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </article>
 
-      <div class="section-title">
-        <h2>Contact</h2>
-        <p>Contact Me</p>
-      </div>
+            <article class="col-lg-4 col-md-6 mb-4" data-categories="unity-xr">
+              <div class="project-card">
+                <img
+                  class="project-card__image"
+                  src="assets/img/portfolio/simple-walking.jpg"
+                  width="1280"
+                  height="576"
+                  alt="Simple Walking screenshot"
+                  loading="lazy"
+                />
+                <div class="project-card__body">
+                  <h3 class="project-card__title">Simple Walking</h3>
+                  <p class="project-card__category">Unity VR</p>
+                  <p class="project-card__description">Move around a 3D environment in VR without controllers.</p>
+                  <div class="project-card__links">
+                    <a
+                      class="project-card__link portfolio-lightbox"
+                      href="assets/img/portfolio/simple-walking.jpg"
+                      data-gallery="portfolioGallery"
+                      aria-label="Zoom Simple Walking screenshot"
+                      ><i class="bx bx-plus" aria-hidden="true"></i> Zoom</a
+                    >
+                    <a
+                      class="project-card__link"
+                      href="https://github.com/aramirezz0110/UnityGoogleVRExamples"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Simple Walking code on GitHub"
+                      ><i class="bx bx-code-alt" aria-hidden="true"></i> Code</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </article>
 
-      <div class="row mt-2">
+            <article class="col-lg-4 col-md-6 mb-4" data-categories="unity-3d">
+              <div class="project-card">
+                <img
+                  class="project-card__image"
+                  src="assets/img/portfolio/CollectCoins.png"
+                  width="970"
+                  height="542"
+                  alt="Collecting Coins and Minimap screenshot"
+                  loading="lazy"
+                />
+                <div class="project-card__body">
+                  <h3 class="project-card__title">Collecting Coins &amp; Minimap</h3>
+                  <p class="project-card__category">Unity 3D</p>
+                  <p class="project-card__description">First-person item collection game with a minimap.</p>
+                  <div class="project-card__links">
+                    <a
+                      class="project-card__link portfolio-lightbox"
+                      href="assets/img/portfolio/CollectCoins.png"
+                      data-gallery="portfolioGallery"
+                      aria-label="Zoom Collecting Coins and Minimap screenshot"
+                      ><i class="bx bx-plus" aria-hidden="true"></i> Zoom</a
+                    >
+                    <a
+                      class="project-card__link"
+                      href="https://github.com/aramirezz0110/CollectCoins"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Collecting Coins and Minimap code on GitHub"
+                      ><i class="bx bx-code-alt" aria-hidden="true"></i> Code</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </article>
 
-        <div class="col-md-6 d-flex align-items-stretch">
-          <div class="info-box">
-            <i class="bx bx-map"></i>
-            <h3>My Address</h3>
-            <p>La Paz, Bolivia</p>
+            <article class="col-lg-4 col-md-6 mb-4" data-categories="unity-3d">
+              <div class="project-card">
+                <img
+                  class="project-card__image"
+                  src="assets/img/portfolio/ZigZagProcedural.png"
+                  width="588"
+                  height="328"
+                  alt="Zig Zag 3D screenshot"
+                  loading="lazy"
+                />
+                <div class="project-card__body">
+                  <h3 class="project-card__title">Zig Zag 3D</h3>
+                  <p class="project-card__category">Unity 3D</p>
+                  <p class="project-card__description">Zig Zag game with procedural level generation.</p>
+                  <div class="project-card__links">
+                    <a
+                      class="project-card__link portfolio-lightbox"
+                      href="assets/img/portfolio/ZigZagProcedural.png"
+                      data-gallery="portfolioGallery"
+                      aria-label="Zoom Zig Zag 3D screenshot"
+                      ><i class="bx bx-plus" aria-hidden="true"></i> Zoom</a
+                    >
+                    <a
+                      class="project-card__link"
+                      href="https://github.com/aramirezz0110/ZigZagProcedural"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Zig Zag 3D code on GitHub"
+                      ><i class="bx bx-code-alt" aria-hidden="true"></i> Code</a
+                    >
+                    <a
+                      class="project-card__link"
+                      href="https://www.youtube.com/watch?v=fjWiw7kBsMU"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Zig Zag 3D video on YouTube"
+                      ><i class="bx bx-video" aria-hidden="true"></i> Video</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="col-lg-4 col-md-6 mb-4" data-categories="unity-2d">
+              <div class="project-card">
+                <img
+                  class="project-card__image"
+                  src="assets/img/portfolio/FruitNinja.png"
+                  width="941"
+                  height="528"
+                  alt="Fruit Ninja 2D screenshot"
+                  loading="lazy"
+                />
+                <div class="project-card__body">
+                  <h3 class="project-card__title">Fruit Ninja 2D</h3>
+                  <p class="project-card__category">Unity 2D</p>
+                  <p class="project-card__description">Fruit-slicing game for PC and mobile.</p>
+                  <div class="project-card__links">
+                    <a
+                      class="project-card__link portfolio-lightbox"
+                      href="assets/img/portfolio/FruitNinja.png"
+                      data-gallery="portfolioGallery"
+                      aria-label="Zoom Fruit Ninja 2D screenshot"
+                      ><i class="bx bx-plus" aria-hidden="true"></i> Zoom</a
+                    >
+                    <a
+                      class="project-card__link"
+                      href="https://github.com/aramirezz0110/FruitNinja"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Fruit Ninja 2D code on GitHub"
+                      ><i class="bx bx-code-alt" aria-hidden="true"></i> Code</a
+                    >
+                    <a
+                      class="project-card__link"
+                      href="https://www.youtube.com/watch?v=GPkWhQk1zd8"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Fruit Ninja 2D video on YouTube"
+                      ><i class="bx bx-video" aria-hidden="true"></i> Video</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="col-lg-4 col-md-6 mb-4" data-categories="unity-2d">
+              <div class="project-card">
+                <img
+                  class="project-card__image"
+                  src="assets/img/portfolio/Pong2D.png"
+                  width="964"
+                  height="544"
+                  alt="Pong Game screenshot"
+                  loading="lazy"
+                />
+                <div class="project-card__body">
+                  <h3 class="project-card__title">Pong Game</h3>
+                  <p class="project-card__category">Unity 2D</p>
+                  <p class="project-card__description">Pong with player vs. player and player vs. machine modes.</p>
+                  <div class="project-card__links">
+                    <a
+                      class="project-card__link portfolio-lightbox"
+                      href="assets/img/portfolio/Pong2D.png"
+                      data-gallery="portfolioGallery"
+                      aria-label="Zoom Pong Game screenshot"
+                      ><i class="bx bx-plus" aria-hidden="true"></i> Zoom</a
+                    >
+                    <a
+                      class="project-card__link"
+                      href="https://github.com/aramirezz0110/Pong2D"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Pong Game code on GitHub"
+                      ><i class="bx bx-code-alt" aria-hidden="true"></i> Code</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="col-lg-4 col-md-6 mb-4" data-categories="unity-xr">
+              <div class="project-card">
+                <img
+                  class="project-card__image"
+                  src="assets/img/portfolio/SpaceShooterVR.png"
+                  width="1491"
+                  height="853"
+                  alt="Space Shooter VR screenshot"
+                  loading="lazy"
+                />
+                <div class="project-card__body">
+                  <h3 class="project-card__title">Space Shooter VR</h3>
+                  <p class="project-card__category">Unity VR</p>
+                  <p class="project-card__description">Single-player VR space shooter with a scoring system.</p>
+                  <div class="project-card__links">
+                    <a
+                      class="project-card__link"
+                      href="https://www.youtube.com/watch?v=6WTAoMb1N8g&amp;t=19s"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Space Shooter VR video on YouTube"
+                      ><i class="bx bx-video" aria-hidden="true"></i> Video</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="col-lg-4 col-md-6 mb-4" data-categories="unity-xr">
+              <div class="project-card">
+                <img
+                  class="project-card__image"
+                  src="assets/img/portfolio/MultiplayerVR.png"
+                  width="1450"
+                  height="862"
+                  alt="Multiplayer VR screenshot"
+                  loading="lazy"
+                />
+                <div class="project-card__body">
+                  <h3 class="project-card__title">Multiplayer VR</h3>
+                  <p class="project-card__category">Unity VR</p>
+                  <p class="project-card__description">
+                    Shared 3D space for multiplayer interaction using Photon with voice chat.
+                  </p>
+                  <div class="project-card__links">
+                    <a
+                      class="project-card__link"
+                      href="https://www.youtube.com/watch?v=JIMcC8JU5wc"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Multiplayer VR video on YouTube"
+                      ><i class="bx bx-video" aria-hidden="true"></i> Video</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="col-lg-4 col-md-6 mb-4" data-categories="unity-xr">
+              <div class="project-card">
+                <img
+                  class="project-card__image"
+                  src="assets/img/portfolio/SwordAndPistolVR.png"
+                  width="964"
+                  height="577"
+                  alt="Sword and Pistol VR screenshot"
+                  loading="lazy"
+                />
+                <div class="project-card__body">
+                  <h3 class="project-card__title">Sword and Pistol VR</h3>
+                  <p class="project-card__category">Unity VR</p>
+                  <p class="project-card__description">Beat Saber-style VR shooter and slicer with a scoring system.</p>
+                  <div class="project-card__links">
+                    <a
+                      class="project-card__link"
+                      href="https://www.youtube.com/watch?v=6t8nY7SOzLA"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Sword and Pistol VR video on YouTube"
+                      ><i class="bx bx-video" aria-hidden="true"></i> Video</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="col-lg-4 col-md-6 mb-4" data-categories="unity-xr">
+              <div class="project-card">
+                <img
+                  class="project-card__image"
+                  src="assets/img/portfolio/AlejandriaPunk.png"
+                  width="1637"
+                  height="929"
+                  alt="Alejandria Punk VR screenshot"
+                  loading="lazy"
+                />
+                <div class="project-card__body">
+                  <h3 class="project-card__title">Alejandria Punk VR</h3>
+                  <p class="project-card__category">Unity VR</p>
+                  <p class="project-card__description">Underwater-themed 3D roller coaster experience in VR.</p>
+                  <div class="project-card__links">
+                    <a
+                      class="project-card__link"
+                      href="https://www.youtube.com/watch?v=PyGHAf2I-8c"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Alejandria Punk VR video on YouTube"
+                      ><i class="bx bx-video" aria-hidden="true"></i> Video</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </article>
           </div>
         </div>
+      </section>
 
-        <div class="col-md-6 mt-4 mt-md-0 d-flex align-items-stretch">
-          <div class="info-box">
-            <i class="bx bx-share-alt"></i>
-            <h3>Social Profiles</h3>
-            <div class="social-links">              
-              <a href="https://github.com/aramirezz0110" class="github" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i></a>
-              <a href="https://www.linkedin.com/in/arom-mauricio-ramirez-zambrana-a71024158/" class="linkedin" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin"></i></a>
-              <a href="https://x.com/mau_ramirez666" class="twitter" aria-label="X (Twitter)" target="_blank" rel="noopener noreferrer"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
-              <a href="https://www.youtube.com/channel/UCn8pJ5PdFufjcH8Wa8UEUfA" class="youtube" aria-label="YouTube" target="_blank" rel="noopener noreferrer"><i class="bi bi-youtube"></i></a>
+      <!-- ======= Skills ======= -->
+      <section id="skills" class="skills">
+        <div class="container section-panel">
+          <div class="section-heading">
+            <h2 class="section-heading__title">Skills</h2>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="skill-group">
+                <h3 class="skill-group__title">Mobile Development</h3>
+                <ul class="skill-group__list">
+                  <li class="skill-group__item">Flutter</li>
+                  <li class="skill-group__item">Dart</li>
+                  <li class="skill-group__item">Android</li>
+                  <li class="skill-group__item">iOS</li>
+                  <li class="skill-group__item">Responsive UI</li>
+                  <li class="skill-group__item">Custom widgets</li>
+                  <li class="skill-group__item">Navigation &amp; routing</li>
+                  <li class="skill-group__item">Forms &amp; validation</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="skill-group">
+                <h3 class="skill-group__title">Architecture &amp; State Management</h3>
+                <ul class="skill-group__list">
+                  <li class="skill-group__item">Bloc / Cubit</li>
+                  <li class="skill-group__item">Provider</li>
+                  <li class="skill-group__item">Clean Architecture</li>
+                  <li class="skill-group__item">Feature-based architecture</li>
+                  <li class="skill-group__item">Dependency Injection</li>
+                  <li class="skill-group__item">Design systems</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="skill-group">
+                <h3 class="skill-group__title">Backend &amp; Integrations</h3>
+                <ul class="skill-group__list">
+                  <li class="skill-group__item">REST APIs</li>
+                  <li class="skill-group__item">JSON serialization</li>
+                  <li class="skill-group__item">Firebase</li>
+                  <li class="skill-group__item">Authentication</li>
+                  <li class="skill-group__item">Payment integrations</li>
+                  <li class="skill-group__item">Feature flags &amp; Remote Config</li>
+                  <li class="skill-group__item">Local storage</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="skill-group">
+                <h3 class="skill-group__title">Unity &amp; XR</h3>
+                <ul class="skill-group__list">
+                  <li class="skill-group__item">Unity</li>
+                  <li class="skill-group__item">C#</li>
+                  <li class="skill-group__item">2D &amp; 3D gameplay systems</li>
+                  <li class="skill-group__item">VR / AR / MR</li>
+                  <li class="skill-group__item">Multiplayer (Photon)</li>
+                  <li class="skill-group__item">Performance profiling &amp; optimization</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="skill-group">
+                <h3 class="skill-group__title">Tools &amp; Practices</h3>
+                <ul class="skill-group__list">
+                  <li class="skill-group__item">Git &amp; GitHub</li>
+                  <li class="skill-group__item">Android Studio</li>
+                  <li class="skill-group__item">VS Code</li>
+                  <li class="skill-group__item">PlayFab</li>
+                  <li class="skill-group__item">Unit &amp; widget testing</li>
+                  <li class="skill-group__item">Code reviews</li>
+                  <li class="skill-group__item">Agile / Scrum</li>
+                  <li class="skill-group__item">AI-assisted development (Claude Code, Cursor)</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
+      </section>
 
-        <div class="col-md-6 mt-4 d-flex align-items-stretch">
-          <div class="info-box">
-            <i class="bx bx-envelope"></i>
-            <h3>Email Me</h3>
-            <p><a href="mailto:arommramirezz@gmail.com">arommramirezz@gmail.com</a></p>
+      <!-- ======= Services ======= -->
+      <section id="services" class="services">
+        <div class="container section-panel">
+          <div class="section-heading">
+            <h2 class="section-heading__title">Services</h2>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mb-4">
+              <div class="service-card">
+                <h3 class="service-card__title">Flutter App Development</h3>
+                <p class="service-card__text">
+                  Cross-platform apps for Android, iOS, web and desktop (Windows, macOS, Linux) from a single codebase.
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mb-4">
+              <div class="service-card">
+                <h3 class="service-card__title">Flutter Architecture &amp; Modernization</h3>
+                <p class="service-card__text">
+                  Feature-based architecture, design systems, state management and refactoring of legacy code.
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mb-4">
+              <div class="service-card">
+                <h3 class="service-card__title">API, Firebase &amp; Payments Integration</h3>
+                <p class="service-card__text">
+                  REST APIs, Firebase services, authentication and third-party payment providers.
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mb-4">
+              <div class="service-card">
+                <h3 class="service-card__title">Unity Game Development</h3>
+                <p class="service-card__text">2D and 3D games for mobile and PC, from prototype to release.</p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mb-4">
+              <div class="service-card">
+                <h3 class="service-card__title">XR Development (AR / VR / MR)</h3>
+                <p class="service-card__text">
+                  Immersive experiences for mobile devices and standalone headsets such as Meta Quest.
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mb-4">
+              <div class="service-card">
+                <h3 class="service-card__title">Multiplayer &amp; Real-Time Systems</h3>
+                <p class="service-card__text">
+                  Networked gameplay, matchmaking and real-time synchronization with Photon.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="services__cta">
+            <p>Have a project in mind?</p>
+            <a class="button" href="#contact">Let's talk</a>
           </div>
         </div>
-        <div class="col-md-6 mt-4 d-flex align-items-stretch">
-          <div class="info-box">
-            <i class="bx bx-phone-call"></i>
-            <h3>Call Me</h3>
-            <p><a href="tel:+59169792487">+591 69792487</a></p>
+      </section>
+
+      <!-- ======= Education ======= -->
+      <section id="education" class="resume">
+        <div class="container section-panel">
+          <div class="section-heading">
+            <h2 class="section-heading__title">Education</h2>
+          </div>
+
+          <article class="resume-item">
+            <h3 class="resume-item__title">Bachelor of Systems Engineering</h3>
+            <p class="resume-item__company">Military School of Engineering (EMI) · La Paz, Bolivia</p>
+            <p class="resume-item__date">2017 – 2021</p>
+          </article>
+
+          <article class="resume-item">
+            <h3 class="resume-item__title">Certifications</h3>
+            <p class="resume-item__company">Udemy</p>
+            <ul>
+              <li>Master in Video Game Programming with Unity 2021 and C#</li>
+              <li>Multiplayer Virtual Reality (VR) Development with Unity</li>
+              <li>Master in Augmented Reality with Unity 2021</li>
+              <li>Build Multiplayer Games with Unity and Photon PUN 2</li>
+              <li>Design Patterns for Game Programming</li>
+            </ul>
+          </article>
+
+          <article class="resume-item">
+            <h3 class="resume-item__title">Languages</h3>
+            <ul>
+              <li>Spanish — Native</li>
+              <li>English — C1</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- ======= Contact ======= -->
+      <section id="contact" class="contact">
+        <div class="container section-panel">
+          <div class="section-heading">
+            <h2 class="section-heading__title">Contact</h2>
+          </div>
+
+          <div class="contact__intro">
+            <p>
+              I'm open to remote roles and freelance projects in Flutter and Unity. The fastest way to reach me is by
+              email.
+            </p>
+            <a class="button" href="mailto:arommramirezz@gmail.com">Email me</a>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6 d-flex align-items-stretch mb-4">
+              <div class="contact-card">
+                <i class="contact-card__icon bx bx-map" aria-hidden="true"></i>
+                <h3 class="contact-card__title">Location</h3>
+                <p class="contact-card__text">La Paz, Bolivia (GMT-4)</p>
+              </div>
+            </div>
+            <div class="col-md-6 d-flex align-items-stretch mb-4">
+              <div class="contact-card">
+                <i class="contact-card__icon bx bx-envelope" aria-hidden="true"></i>
+                <h3 class="contact-card__title">Email</h3>
+                <p class="contact-card__text"><a href="mailto:arommramirezz@gmail.com">arommramirezz@gmail.com</a></p>
+              </div>
+            </div>
+            <div class="col-md-6 d-flex align-items-stretch mb-4">
+              <div class="contact-card">
+                <i class="contact-card__icon bx bx-phone-call" aria-hidden="true"></i>
+                <h3 class="contact-card__title">Phone</h3>
+                <p class="contact-card__text"><a href="tel:+59169792487">+591 69792487</a></p>
+              </div>
+            </div>
+            <div class="col-md-6 d-flex align-items-stretch mb-4">
+              <div class="contact-card">
+                <i class="contact-card__icon bx bx-share-alt" aria-hidden="true"></i>
+                <h3 class="contact-card__title">Social</h3>
+                <div class="social-links social-links--compact">
+                  <a
+                    href="https://www.linkedin.com/in/arom-mauricio-ramirez-zambrana-a71024158/"
+                    aria-label="LinkedIn"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><i class="bi bi-linkedin" aria-hidden="true"></i
+                  ></a>
+                  <a
+                    href="https://github.com/aramirezz0110"
+                    aria-label="GitHub"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><i class="bi bi-github" aria-hidden="true"></i
+                  ></a>
+                  <a
+                    href="https://x.com/mau_ramirez666"
+                    aria-label="X (Twitter)"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><svg width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                      <path
+                        d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+                      /></svg
+                  ></a>
+                  <a
+                    href="https://www.youtube.com/channel/UCn8pJ5PdFufjcH8Wa8UEUfA"
+                    aria-label="YouTube"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><i class="bi bi-youtube" aria-hidden="true"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <p>© <span data-js="footer-year">2026</span> Arom Mauricio Ramirez Zambrana</p>
+        <a href="#hero">Back to top</a>
       </div>
+    </footer>
 
-    </div>
-  </section>
-
- 
-
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-
-  <script src="assets/js/main.js"></script>
-
-</body>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script type="module" src="src/features/home/home.page.js"></script>
+  </body>
 </html>

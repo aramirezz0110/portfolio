@@ -55,8 +55,9 @@ Solo el dev pasa algo a `approved`. Una spec mergeada (`implemented`) no se rees
 
 ## Primeras specs sugeridas
 
-1. `001-tokens-y-estilos` — pasar colores hex y `style=""` inline del legado a tokens (requisito del modo claro/oscuro).
-2. `002-modo-oscuro` — selector de tema (oscuro por defecto) con `theme-init.js`.
-3. `003-selector-idioma` — inglés por defecto + español.
-4. `004-migrar-main-js` — de IIFE a ES modules en `src/features/`.
-5. `005-seo` — sitemap, robots, JSON-LD.
+1. `001-contenido-y-estructura` — reordenar y reescribir el contenido, scroll continuo (en curso).
+2. `002-tokens-y-estilos` — pasar colores hex y `style=""` inline del legado a tokens (requisito del modo claro/oscuro).
+3. `003-modo-oscuro` — selector de tema (oscuro por defecto) con `theme-init.js`.
+4. `004-selector-idioma` — inglés por defecto + español.
+5. `005-migrar-main-js` — de IIFE a ES modules en `src/features/`.
+6. `006-seo` — sitemap, robots, JSON-LD.
