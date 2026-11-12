@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "command -v node >/dev/null 2>&1 || eval \"$(fnm env --shell bash 2>/dev/null)\"; node \"$CLAUDE_PROJECT_DIR/scripts/format-edited-file.mjs\""
+          }
+        ]
+      }
+    ]
+  }
+}

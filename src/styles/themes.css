@@ -1,0 +1,18 @@
+/*
+ * Tema claro. Solo reasigna tokens semánticos a primitivos de tokens.css (nunca colores literales).
+ * El tema por defecto es oscuro (:root en tokens.css). El atributo lo aplica
+ * src/core/theme-init.js (se crea en la spec del modo claro/oscuro).
+ * Valores provisionales: se definen y validan (contraste WCAG AA) en esa spec.
+ */
+:root[data-theme='light'] {
+  color-scheme: light;
+
+  --color-bg: var(--palette-white);
+  --color-surface: var(--palette-gray-100);
+  --color-overlay: var(--palette-black-alpha-90);
+  --color-border: var(--palette-gray-400);
+  --color-text: var(--palette-black);
+  --color-text-muted: var(--palette-gray-800);
+  --color-accent: var(--palette-green-600);
+  --color-accent-hover: var(--palette-green-500);
+}

@@ -1,0 +1,15 @@
+# Dependencias y salidas
+node_modules/
+coverage/
+
+# Secretos y configuración local
+.env
+.env.*
+!.env.example
+
+# Personal de IA
+CLAUDE.local.md
+.claude/settings.local.json
+
+# Sistema
+.DS_Store

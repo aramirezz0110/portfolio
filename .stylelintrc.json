@@ -1,0 +1,31 @@
+{
+  "extends": ["stylelint-config-standard"],
+  "ignoreFiles": ["assets/**", "node_modules/**", "coverage/**"],
+  "rules": {
+    "color-no-hex": [
+      true,
+      { "message": "Usa un token var(--color-…); los hex solo viven en src/styles/tokens.css." }
+    ],
+    "color-named": ["never", { "message": "Usa un token var(--color-…)." }],
+    "function-disallowed-list": [
+      ["rgb", "rgba", "hsl", "hsla"],
+      { "message": "Usa un token var(--color-…); los colores solo viven en src/styles/tokens.css." }
+    ],
+    "declaration-no-important": true,
+    "selector-max-id": 0,
+    "selector-class-pattern": [
+      "^[a-z][a-z0-9]*(-[a-z0-9]+)*(__[a-z0-9]+(-[a-z0-9]+)*)?(--[a-z0-9]+(-[a-z0-9]+)*)?$",
+      { "message": "Clases en BEM con kebab-case: bloque__elemento--modificador." }
+    ]
+  },
+  "overrides": [
+    {
+      "files": ["src/styles/tokens.css"],
+      "rules": {
+        "color-no-hex": null,
+        "color-named": null,
+        "function-disallowed-list": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "hooks": {
+    "afterFileEdit": [
+      {
+        "command": "command -v node >/dev/null 2>&1 || eval \"$(fnm env --shell bash 2>/dev/null)\"; node scripts/format-edited-file.mjs"
+      }
+    ]
+  }
+}
