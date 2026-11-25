@@ -384,13 +384,48 @@
             <h2 class="section-heading__title">Projects</h2>
           </div>
 
-          <!-- TODO (Fase 4): agregar el botón "Flutter" cuando exista la tarjeta "In progress". -->
           <div class="project-filters" data-js="project-filters" role="group" aria-label="Filter projects" hidden>
             <button type="button" class="project-filters__button" data-filter="all" aria-pressed="true">All</button>
+            <button type="button" class="project-filters__button" data-filter="flutter" aria-pressed="false">
+              Flutter
+            </button>
             <button type="button" class="project-filters__button" data-filter="xr" aria-pressed="false">XR</button>
           </div>
 
           <div class="row">
+            <article class="col-lg-4 col-md-6 mb-4" data-categories="flutter xr">
+              <div class="project-card project-card--in-progress">
+                <!-- TODO: reemplazar el marcador por una captura (<img class="project-card__image"> con alt, width, height y loading="lazy"). -->
+                <div class="project-card__image media-placeholder" aria-hidden="true"></div>
+                <div class="project-card__body">
+                  <p class="project-card__badge">In progress</p>
+                  <h3 class="project-card__title">Furniture AR app</h3>
+                  <p class="project-card__description">
+                    Flutter handles the catalog, login and cart; an embedded Unity module with AR Foundation places
+                    products in your real space.
+                  </p>
+                  <ul class="tag-list" aria-label="Stack">
+                    <li class="tag">Flutter</li>
+                    <li class="tag">Unity</li>
+                    <li class="tag">AR Foundation</li>
+                  </ul>
+                  <div class="project-card__links">
+                    <!-- TODO: agregar href="https://play.google.com/store/apps/details?id=…" y quitar hidden. -->
+                    <a class="project-card__link" target="_blank" rel="noopener noreferrer" hidden
+                      ><i class="bx bxl-play-store" aria-hidden="true"></i> Google Play</a
+                    >
+                    <!-- TODO: agregar href del repositorio y quitar hidden. -->
+                    <a class="project-card__link" target="_blank" rel="noopener noreferrer" hidden
+                      ><i class="bx bx-code-alt" aria-hidden="true"></i> Code</a
+                    >
+                    <!-- TODO: agregar href del video y quitar hidden. -->
+                    <a class="project-card__link" target="_blank" rel="noopener noreferrer" hidden
+                      ><i class="bx bx-video" aria-hidden="true"></i> Video</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </article>
 
             <article class="col-lg-4 col-md-6 mb-4" data-categories="xr">
               <div class="project-card">
