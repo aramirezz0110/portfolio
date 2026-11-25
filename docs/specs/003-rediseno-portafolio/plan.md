@@ -174,4 +174,6 @@ Cada fase termina con `npm run check`, un resumen al dev y un mensaje de commit 
 
 <!-- Cambios respecto al plan aprobado: qué, por qué, aprobado el AAAA-MM-DD. -->
 
-- **T2 (Fase 1):** `.hero__title span` pasa de `border-bottom` a `text-decoration: underline` en `home.css`. Con el titular nuevo en dos o más líneas, el borde pisaba la línea siguiente en móvil. Solo "Flutter & Unity Developer" va subrayado; el resto del titular sigue en texto normal. Pendiente de aprobación del dev.
+- **T2 (Fase 1):** `.hero__title span` pasa de `border-bottom` a `text-decoration: underline` en `home.css`. Con el titular nuevo en dos o más líneas, el borde pisaba la línea siguiente en móvil. Solo "Flutter & Unity Developer" va subrayado; el resto del titular sigue en texto normal. Aprobado el 2026-11-25 (commit de la Fase 1).
+- **T6 (Fase 2):** el filtro queda en **All / XR** hasta la Fase 4. Las 4 tarjetas de esta fase son XR y un botón "Flutter" sin tarjetas rompería "ningún filtro queda vacío" (CA6). El botón "Flutter" se agrega en T11 junto con la tarjeta "In progress". Pendiente de aprobación del dev.
+- **T5 (Fase 2):** se quita `.project-card__category` (la etiqueta "Unity VR" de cada tarjeta) porque las etiquetas de stack la reemplazan. Pendiente de aprobación del dev.

@@ -6,12 +6,12 @@ function renderProjects() {
     `<section data-js="projects">
       <div data-js="project-filters" hidden>
         <button type="button" data-filter="all">All</button>
-        <button type="button" data-filter="unity-3d">Unity 3D</button>
-        <button type="button" data-filter="unity-xr">Unity VR - AR</button>
+        <button type="button" data-filter="flutter">Flutter</button>
+        <button type="button" data-filter="xr">XR</button>
       </div>
-      <article data-categories="unity-3d">A</article>
-      <article data-categories="unity-xr">B</article>
-      <article data-categories="unity-2d">C</article>
+      <article data-categories="flutter xr">A</article>
+      <article data-categories="xr">B</article>
+      <article data-categories="xr">C</article>
     </section>`,
     'text/html',
   );
@@ -45,10 +45,10 @@ describe('initProjectFilter', () => {
     const root = renderProjects();
     filter = initProjectFilter(root);
 
-    root.querySelector('[data-filter="unity-xr"]').click();
+    root.querySelector('[data-filter="flutter"]').click();
 
-    expect(visibleTexts(root)).toEqual(['B']);
-    expect(root.querySelector('[data-filter="unity-xr"]').getAttribute('aria-pressed')).toBe(
+    expect(visibleTexts(root)).toEqual(['A']);
+    expect(root.querySelector('[data-filter="flutter"]').getAttribute('aria-pressed')).toBe(
       'true',
     );
     expect(root.querySelector('[data-filter="all"]').getAttribute('aria-pressed')).toBe('false');
@@ -58,8 +58,17 @@ describe('initProjectFilter', () => {
     const root = renderProjects();
     filter = initProjectFilter(root);
 
-    root.querySelector('[data-filter="unity-3d"]').click();
+    root.querySelector('[data-filter="flutter"]').click();
     root.querySelector('[data-filter="all"]').click();
+
+    expect(visibleTexts(root)).toEqual(['A', 'B', 'C']);
+  });
+
+  it('una tarjeta con varias categorías aparece en cada filtro', () => {
+    const root = renderProjects();
+    filter = initProjectFilter(root);
+
+    root.querySelector('[data-filter="xr"]').click();
 
     expect(visibleTexts(root)).toEqual(['A', 'B', 'C']);
   });

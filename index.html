@@ -324,56 +324,109 @@
             <h2 class="section-heading__title">Projects</h2>
           </div>
 
+          <!-- TODO (Fase 4): agregar el botón "Flutter" cuando exista la tarjeta "In progress". -->
           <div class="project-filters" data-js="project-filters" role="group" aria-label="Filter projects" hidden>
             <button type="button" class="project-filters__button" data-filter="all" aria-pressed="true">All</button>
-            <button type="button" class="project-filters__button" data-filter="unity-3d" aria-pressed="false">
-              Unity 3D
-            </button>
-            <button type="button" class="project-filters__button" data-filter="unity-2d" aria-pressed="false">
-              Unity 2D
-            </button>
-            <button type="button" class="project-filters__button" data-filter="unity-xr" aria-pressed="false">
-              Unity VR - AR
-            </button>
+            <button type="button" class="project-filters__button" data-filter="xr" aria-pressed="false">XR</button>
           </div>
 
           <div class="row">
-            <article class="col-lg-4 col-md-6 mb-4" data-categories="unity-3d">
+
+            <article class="col-lg-4 col-md-6 mb-4" data-categories="xr">
               <div class="project-card">
                 <img
                   class="project-card__image"
-                  src="assets/img/portfolio/RollABallScene.png"
-                  width="931"
-                  height="498"
-                  alt="Roll a Ball screenshot"
+                  src="assets/img/portfolio/MultiplayerVR.png"
+                  width="1450"
+                  height="862"
+                  alt="Multiplayer VR screenshot"
                   loading="lazy"
                 />
                 <div class="project-card__body">
-                  <h3 class="project-card__title">Roll a Ball</h3>
-                  <p class="project-card__category">Unity 3D</p>
-                  <p class="project-card__description">3D scene where the player controls a ball.</p>
+                  <h3 class="project-card__title">Multiplayer VR</h3>
+                  <p class="project-card__description">A shared 3D space where several people meet and talk in real time.</p>
+                  <ul class="tag-list" aria-label="Stack">
+                    <li class="tag">Unity</li>
+                    <li class="tag">C#</li>
+                    <li class="tag">Photon</li>
+                    <li class="tag">Voice chat</li>
+                  </ul>
                   <div class="project-card__links">
                     <a
-                      class="project-card__link portfolio-lightbox"
-                      href="assets/img/portfolio/RollABallScene.png"
-                      data-gallery="portfolioGallery"
-                      aria-label="Zoom Roll a Ball screenshot"
-                      ><i class="bx bx-plus" aria-hidden="true"></i> Zoom</a
-                    >
-                    <a
                       class="project-card__link"
-                      href="https://github.com/aramirezz0110/RollABall"
+                      href="https://www.youtube.com/watch?v=JIMcC8JU5wc"
                       target="_blank"
                       rel="noopener noreferrer"
-                      aria-label="Roll a Ball code on GitHub"
-                      ><i class="bx bx-code-alt" aria-hidden="true"></i> Code</a
+                      aria-label="Multiplayer VR video on YouTube"
+                      ><i class="bx bx-video" aria-hidden="true"></i> Video</a
                     >
                   </div>
                 </div>
               </div>
             </article>
-
-            <article class="col-lg-4 col-md-6 mb-4" data-categories="unity-xr">
+            <article class="col-lg-4 col-md-6 mb-4" data-categories="xr">
+              <div class="project-card">
+                <img
+                  class="project-card__image"
+                  src="assets/img/portfolio/SwordAndPistolVR.png"
+                  width="964"
+                  height="577"
+                  alt="Sword and Pistol VR screenshot"
+                  loading="lazy"
+                />
+                <div class="project-card__body">
+                  <h3 class="project-card__title">Sword and Pistol VR</h3>
+                  <p class="project-card__description">A rhythm-style VR shooter and slicer with scoring.</p>
+                  <ul class="tag-list" aria-label="Stack">
+                    <li class="tag">Unity</li>
+                    <li class="tag">C#</li>
+                    <li class="tag">Meta Quest 2 / 3</li>
+                  </ul>
+                  <div class="project-card__links">
+                    <a
+                      class="project-card__link"
+                      href="https://www.youtube.com/watch?v=6t8nY7SOzLA"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Sword and Pistol VR video on YouTube"
+                      ><i class="bx bx-video" aria-hidden="true"></i> Video</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="col-lg-4 col-md-6 mb-4" data-categories="xr">
+              <div class="project-card">
+                <img
+                  class="project-card__image"
+                  src="assets/img/portfolio/AlejandriaPunk.png"
+                  width="1637"
+                  height="929"
+                  alt="Alejandria Punk VR screenshot"
+                  loading="lazy"
+                />
+                <div class="project-card__body">
+                  <h3 class="project-card__title">Alejandria Punk VR</h3>
+                  <p class="project-card__description">An underwater roller coaster ride built for VR.</p>
+                  <ul class="tag-list" aria-label="Stack">
+                    <li class="tag">Unity</li>
+                    <li class="tag">C#</li>
+                    <li class="tag">Meta Quest 2 / 3</li>
+                  </ul>
+                  <div class="project-card__links">
+                    <a
+                      class="project-card__link"
+                      href="https://www.youtube.com/watch?v=PyGHAf2I-8c"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Alejandria Punk VR video on YouTube"
+                      ><i class="bx bx-video" aria-hidden="true"></i> Video</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="col-lg-4 col-md-6 mb-4" data-categories="xr">
               <div class="project-card">
                 <img
                   class="project-card__image"
@@ -385,10 +438,12 @@
                 />
                 <div class="project-card__body">
                   <h3 class="project-card__title">Architecture AR</h3>
-                  <p class="project-card__category">Unity AR</p>
-                  <p class="project-card__description">
-                    Shows 3D architecture details using augmented reality with Vuforia.
-                  </p>
+                  <p class="project-card__description">Shows 3D architectural details over real plans with augmented reality.</p>
+                  <ul class="tag-list" aria-label="Stack">
+                    <li class="tag">Unity</li>
+                    <li class="tag">C#</li>
+                    <li class="tag">Vuforia</li>
+                  </ul>
                   <div class="project-card__links">
                     <a
                       class="project-card__link portfolio-lightbox"
@@ -404,451 +459,6 @@
                       rel="noopener noreferrer"
                       aria-label="Architecture AR code on GitHub"
                       ><i class="bx bx-code-alt" aria-hidden="true"></i> Code</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <article class="col-lg-4 col-md-6 mb-4" data-categories="unity-2d">
-              <div class="project-card">
-                <img
-                  class="project-card__image"
-                  src="assets/img/portfolio/SpaceInvadersDemo.png"
-                  width="614"
-                  height="347"
-                  alt="Space Invaders Demo screenshot"
-                  loading="lazy"
-                />
-                <div class="project-card__body">
-                  <h3 class="project-card__title">Space Invaders Demo</h3>
-                  <p class="project-card__category">Unity 2D</p>
-                  <p class="project-card__description">A 2D space shooter.</p>
-                  <div class="project-card__links">
-                    <a
-                      class="project-card__link portfolio-lightbox"
-                      href="assets/img/portfolio/SpaceInvadersDemo.png"
-                      data-gallery="portfolioGallery"
-                      aria-label="Zoom Space Invaders Demo screenshot"
-                      ><i class="bx bx-plus" aria-hidden="true"></i> Zoom</a
-                    >
-                    <a
-                      class="project-card__link"
-                      href="https://github.com/aramirezz0110/SpaceInvadersDemo"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label="Space Invaders Demo code on GitHub"
-                      ><i class="bx bx-code-alt" aria-hidden="true"></i> Code</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <article class="col-lg-4 col-md-6 mb-4" data-categories="unity-xr">
-              <div class="project-card">
-                <img
-                  class="project-card__image"
-                  src="assets/img/portfolio/360-image-app.jpg"
-                  width="1280"
-                  height="576"
-                  alt="360 Image Visualizer screenshot"
-                  loading="lazy"
-                />
-                <div class="project-card__body">
-                  <h3 class="project-card__title">360 Image Visualizer</h3>
-                  <p class="project-card__category">Unity VR</p>
-                  <p class="project-card__description">Displays 360° images using VR.</p>
-                  <div class="project-card__links">
-                    <a
-                      class="project-card__link portfolio-lightbox"
-                      href="assets/img/portfolio/360-image-app.jpg"
-                      data-gallery="portfolioGallery"
-                      aria-label="Zoom 360 Image Visualizer screenshot"
-                      ><i class="bx bx-plus" aria-hidden="true"></i> Zoom</a
-                    >
-                    <a
-                      class="project-card__link"
-                      href="https://github.com/aramirezz0110/UnityGoogleVRExamples"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label="360 Image Visualizer code on GitHub"
-                      ><i class="bx bx-code-alt" aria-hidden="true"></i> Code</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <article class="col-lg-4 col-md-6 mb-4" data-categories="unity-xr">
-              <div class="project-card">
-                <img
-                  class="project-card__image"
-                  src="assets/img/portfolio/art-gallery.jpg"
-                  width="1280"
-                  height="576"
-                  alt="Art Gallery screenshot"
-                  loading="lazy"
-                />
-                <div class="project-card__body">
-                  <h3 class="project-card__title">Art Gallery</h3>
-                  <p class="project-card__category">Unity VR</p>
-                  <p class="project-card__description">Explore an art gallery in VR.</p>
-                  <div class="project-card__links">
-                    <a
-                      class="project-card__link portfolio-lightbox"
-                      href="assets/img/portfolio/art-gallery.jpg"
-                      data-gallery="portfolioGallery"
-                      aria-label="Zoom Art Gallery screenshot"
-                      ><i class="bx bx-plus" aria-hidden="true"></i> Zoom</a
-                    >
-                    <a
-                      class="project-card__link"
-                      href="https://github.com/aramirezz0110/UnityGoogleVRExamples"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label="Art Gallery code on GitHub"
-                      ><i class="bx bx-code-alt" aria-hidden="true"></i> Code</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <article class="col-lg-4 col-md-6 mb-4" data-categories="unity-3d">
-              <div class="project-card">
-                <img
-                  class="project-card__image"
-                  src="assets/img/portfolio/FPSZombies.png"
-                  width="712"
-                  height="402"
-                  alt="FPS Zombies screenshot"
-                  loading="lazy"
-                />
-                <div class="project-card__body">
-                  <h3 class="project-card__title">FPS Zombies</h3>
-                  <p class="project-card__category">Unity 3D</p>
-                  <p class="project-card__description">First-person zombie shooter.</p>
-                  <div class="project-card__links">
-                    <a
-                      class="project-card__link portfolio-lightbox"
-                      href="assets/img/portfolio/FPSZombies.png"
-                      data-gallery="portfolioGallery"
-                      aria-label="Zoom FPS Zombies screenshot"
-                      ><i class="bx bx-plus" aria-hidden="true"></i> Zoom</a
-                    >
-                    <a
-                      class="project-card__link"
-                      href="https://github.com/aramirezz0110/FPSZombies"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label="FPS Zombies code on GitHub"
-                      ><i class="bx bx-code-alt" aria-hidden="true"></i> Code</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <article class="col-lg-4 col-md-6 mb-4" data-categories="unity-xr">
-              <div class="project-card">
-                <img
-                  class="project-card__image"
-                  src="assets/img/portfolio/simple-walking.jpg"
-                  width="1280"
-                  height="576"
-                  alt="Simple Walking screenshot"
-                  loading="lazy"
-                />
-                <div class="project-card__body">
-                  <h3 class="project-card__title">Simple Walking</h3>
-                  <p class="project-card__category">Unity VR</p>
-                  <p class="project-card__description">Move around a 3D environment in VR without controllers.</p>
-                  <div class="project-card__links">
-                    <a
-                      class="project-card__link portfolio-lightbox"
-                      href="assets/img/portfolio/simple-walking.jpg"
-                      data-gallery="portfolioGallery"
-                      aria-label="Zoom Simple Walking screenshot"
-                      ><i class="bx bx-plus" aria-hidden="true"></i> Zoom</a
-                    >
-                    <a
-                      class="project-card__link"
-                      href="https://github.com/aramirezz0110/UnityGoogleVRExamples"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label="Simple Walking code on GitHub"
-                      ><i class="bx bx-code-alt" aria-hidden="true"></i> Code</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <article class="col-lg-4 col-md-6 mb-4" data-categories="unity-3d">
-              <div class="project-card">
-                <img
-                  class="project-card__image"
-                  src="assets/img/portfolio/CollectCoins.png"
-                  width="970"
-                  height="542"
-                  alt="Collecting Coins and Minimap screenshot"
-                  loading="lazy"
-                />
-                <div class="project-card__body">
-                  <h3 class="project-card__title">Collecting Coins &amp; Minimap</h3>
-                  <p class="project-card__category">Unity 3D</p>
-                  <p class="project-card__description">First-person item collection game with a minimap.</p>
-                  <div class="project-card__links">
-                    <a
-                      class="project-card__link portfolio-lightbox"
-                      href="assets/img/portfolio/CollectCoins.png"
-                      data-gallery="portfolioGallery"
-                      aria-label="Zoom Collecting Coins and Minimap screenshot"
-                      ><i class="bx bx-plus" aria-hidden="true"></i> Zoom</a
-                    >
-                    <a
-                      class="project-card__link"
-                      href="https://github.com/aramirezz0110/CollectCoins"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label="Collecting Coins and Minimap code on GitHub"
-                      ><i class="bx bx-code-alt" aria-hidden="true"></i> Code</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <article class="col-lg-4 col-md-6 mb-4" data-categories="unity-3d">
-              <div class="project-card">
-                <img
-                  class="project-card__image"
-                  src="assets/img/portfolio/ZigZagProcedural.png"
-                  width="588"
-                  height="328"
-                  alt="Zig Zag 3D screenshot"
-                  loading="lazy"
-                />
-                <div class="project-card__body">
-                  <h3 class="project-card__title">Zig Zag 3D</h3>
-                  <p class="project-card__category">Unity 3D</p>
-                  <p class="project-card__description">Zig Zag game with procedural level generation.</p>
-                  <div class="project-card__links">
-                    <a
-                      class="project-card__link portfolio-lightbox"
-                      href="assets/img/portfolio/ZigZagProcedural.png"
-                      data-gallery="portfolioGallery"
-                      aria-label="Zoom Zig Zag 3D screenshot"
-                      ><i class="bx bx-plus" aria-hidden="true"></i> Zoom</a
-                    >
-                    <a
-                      class="project-card__link"
-                      href="https://github.com/aramirezz0110/ZigZagProcedural"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label="Zig Zag 3D code on GitHub"
-                      ><i class="bx bx-code-alt" aria-hidden="true"></i> Code</a
-                    >
-                    <a
-                      class="project-card__link"
-                      href="https://www.youtube.com/watch?v=fjWiw7kBsMU"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label="Zig Zag 3D video on YouTube"
-                      ><i class="bx bx-video" aria-hidden="true"></i> Video</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <article class="col-lg-4 col-md-6 mb-4" data-categories="unity-2d">
-              <div class="project-card">
-                <img
-                  class="project-card__image"
-                  src="assets/img/portfolio/FruitNinja.png"
-                  width="941"
-                  height="528"
-                  alt="Fruit Ninja 2D screenshot"
-                  loading="lazy"
-                />
-                <div class="project-card__body">
-                  <h3 class="project-card__title">Fruit Ninja 2D</h3>
-                  <p class="project-card__category">Unity 2D</p>
-                  <p class="project-card__description">Fruit-slicing game for PC and mobile.</p>
-                  <div class="project-card__links">
-                    <a
-                      class="project-card__link portfolio-lightbox"
-                      href="assets/img/portfolio/FruitNinja.png"
-                      data-gallery="portfolioGallery"
-                      aria-label="Zoom Fruit Ninja 2D screenshot"
-                      ><i class="bx bx-plus" aria-hidden="true"></i> Zoom</a
-                    >
-                    <a
-                      class="project-card__link"
-                      href="https://github.com/aramirezz0110/FruitNinja"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label="Fruit Ninja 2D code on GitHub"
-                      ><i class="bx bx-code-alt" aria-hidden="true"></i> Code</a
-                    >
-                    <a
-                      class="project-card__link"
-                      href="https://www.youtube.com/watch?v=GPkWhQk1zd8"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label="Fruit Ninja 2D video on YouTube"
-                      ><i class="bx bx-video" aria-hidden="true"></i> Video</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <article class="col-lg-4 col-md-6 mb-4" data-categories="unity-2d">
-              <div class="project-card">
-                <img
-                  class="project-card__image"
-                  src="assets/img/portfolio/Pong2D.png"
-                  width="964"
-                  height="544"
-                  alt="Pong Game screenshot"
-                  loading="lazy"
-                />
-                <div class="project-card__body">
-                  <h3 class="project-card__title">Pong Game</h3>
-                  <p class="project-card__category">Unity 2D</p>
-                  <p class="project-card__description">Pong with player vs. player and player vs. machine modes.</p>
-                  <div class="project-card__links">
-                    <a
-                      class="project-card__link portfolio-lightbox"
-                      href="assets/img/portfolio/Pong2D.png"
-                      data-gallery="portfolioGallery"
-                      aria-label="Zoom Pong Game screenshot"
-                      ><i class="bx bx-plus" aria-hidden="true"></i> Zoom</a
-                    >
-                    <a
-                      class="project-card__link"
-                      href="https://github.com/aramirezz0110/Pong2D"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label="Pong Game code on GitHub"
-                      ><i class="bx bx-code-alt" aria-hidden="true"></i> Code</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <article class="col-lg-4 col-md-6 mb-4" data-categories="unity-xr">
-              <div class="project-card">
-                <img
-                  class="project-card__image"
-                  src="assets/img/portfolio/SpaceShooterVR.png"
-                  width="1491"
-                  height="853"
-                  alt="Space Shooter VR screenshot"
-                  loading="lazy"
-                />
-                <div class="project-card__body">
-                  <h3 class="project-card__title">Space Shooter VR</h3>
-                  <p class="project-card__category">Unity VR</p>
-                  <p class="project-card__description">Single-player VR space shooter with a scoring system.</p>
-                  <div class="project-card__links">
-                    <a
-                      class="project-card__link"
-                      href="https://www.youtube.com/watch?v=6WTAoMb1N8g&amp;t=19s"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label="Space Shooter VR video on YouTube"
-                      ><i class="bx bx-video" aria-hidden="true"></i> Video</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <article class="col-lg-4 col-md-6 mb-4" data-categories="unity-xr">
-              <div class="project-card">
-                <img
-                  class="project-card__image"
-                  src="assets/img/portfolio/MultiplayerVR.png"
-                  width="1450"
-                  height="862"
-                  alt="Multiplayer VR screenshot"
-                  loading="lazy"
-                />
-                <div class="project-card__body">
-                  <h3 class="project-card__title">Multiplayer VR</h3>
-                  <p class="project-card__category">Unity VR</p>
-                  <p class="project-card__description">
-                    Shared 3D space for multiplayer interaction using Photon with voice chat.
-                  </p>
-                  <div class="project-card__links">
-                    <a
-                      class="project-card__link"
-                      href="https://www.youtube.com/watch?v=JIMcC8JU5wc"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label="Multiplayer VR video on YouTube"
-                      ><i class="bx bx-video" aria-hidden="true"></i> Video</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <article class="col-lg-4 col-md-6 mb-4" data-categories="unity-xr">
-              <div class="project-card">
-                <img
-                  class="project-card__image"
-                  src="assets/img/portfolio/SwordAndPistolVR.png"
-                  width="964"
-                  height="577"
-                  alt="Sword and Pistol VR screenshot"
-                  loading="lazy"
-                />
-                <div class="project-card__body">
-                  <h3 class="project-card__title">Sword and Pistol VR</h3>
-                  <p class="project-card__category">Unity VR</p>
-                  <p class="project-card__description">Beat Saber-style VR shooter and slicer with a scoring system.</p>
-                  <div class="project-card__links">
-                    <a
-                      class="project-card__link"
-                      href="https://www.youtube.com/watch?v=6t8nY7SOzLA"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label="Sword and Pistol VR video on YouTube"
-                      ><i class="bx bx-video" aria-hidden="true"></i> Video</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <article class="col-lg-4 col-md-6 mb-4" data-categories="unity-xr">
-              <div class="project-card">
-                <img
-                  class="project-card__image"
-                  src="assets/img/portfolio/AlejandriaPunk.png"
-                  width="1637"
-                  height="929"
-                  alt="Alejandria Punk VR screenshot"
-                  loading="lazy"
-                />
-                <div class="project-card__body">
-                  <h3 class="project-card__title">Alejandria Punk VR</h3>
-                  <p class="project-card__category">Unity VR</p>
-                  <p class="project-card__description">Underwater-themed 3D roller coaster experience in VR.</p>
-                  <div class="project-card__links">
-                    <a
-                      class="project-card__link"
-                      href="https://www.youtube.com/watch?v=PyGHAf2I-8c"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label="Alejandria Punk VR video on YouTube"
-                      ><i class="bx bx-video" aria-hidden="true"></i> Video</a
                     >
                   </div>
                 </div>

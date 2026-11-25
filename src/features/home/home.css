@@ -474,14 +474,6 @@ main > section {
   color: var(--color-text);
 }
 
-.project-card__category {
-  margin: var(--space-1) 0 var(--space-2);
-  font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-semibold);
-  text-transform: uppercase;
-  color: var(--color-accent);
-}
-
 .project-card__description {
   flex: 1;
   margin-bottom: var(--space-3);
