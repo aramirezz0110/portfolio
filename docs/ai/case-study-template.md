@@ -12,10 +12,11 @@ Cada caso de estudio es una página estática `pages/case-study-<slug>.html` del
 
 ## Reglas de contenido
 
+- **Ningún bloque vacío a la vista:** si un bloque todavía solo tiene un TODO (típicamente Results o Gallery), lleva `hidden` hasta completarlo.
 - **Nunca inventar** métricas, nombres de clientes ni datos del equipo. Lo que falte va en un comentario `<!-- TODO: … -->` dentro del bloque.
 - Las métricas deben coincidir con los CV. Si una métrica es del producto (descargas, usuarios) y no del trabajo propio, va en "Context & problem", no en "Results".
 - **Sin código propietario** ni capturas con datos confidenciales. Si el cliente no permite nombrarlo, el título describe el producto ("Fintech App in Flutter") y el nombre solo aparece donde ya es público (Experience).
-- Imágenes: `<img>` con `alt`, `width`, `height` y `loading="lazy"`, en JPEG optimizado (`sips`, ≤ 1200 px de ancho; ver Desvíos del plan 003). Mientras no haya, usa `.media-placeholder` (decorativo, `aria-hidden="true"`).
+- Imágenes: `<img>` con `alt`, `width`, `height` y `loading="lazy"`, en JPEG optimizado (`sips`, ≤ 1200 px de ancho; ver Desvíos del plan 003). Si un caso no tiene imágenes, la sección Gallery lleva `hidden` (no se muestra un bloque vacío ni marcadores).
 
 ## Los 6 bloques
 
@@ -49,11 +50,17 @@ Cada caso de estudio es una página estática `pages/case-study-<slug>.html` del
 
       <!-- role, decisions, results, stack: mismo patrón con ids role, decisions, results, stack -->
 
+      <!-- Sin imágenes: agrega hidden a esta sección. -->
       <section class="case-study__block" aria-labelledby="gallery">
         <h2 class="section-heading__title" id="gallery">Gallery</h2>
         <div class="case-study__gallery">
-          <div class="media-placeholder" aria-hidden="true"></div>
-          <div class="media-placeholder" aria-hidden="true"></div>
+          <img
+            src="../assets/img/case-study-slug-1.jpg"
+            alt="…"
+            width="1200"
+            height="675"
+            loading="lazy"
+          />
         </div>
       </section>
 

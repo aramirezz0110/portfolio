@@ -72,7 +72,7 @@ Orden de la página principal: **Hero → About → Case Studies → Experience 
   5. Stack
   6. Images / video (sin código propietario)
 - Cada página tiene nav simple con vuelta al portafolio, un CTA "Book a call" al final y el footer del sitio.
-- Lo que falte se marca con **TODO** en comentarios HTML; en la página visible se muestra un marcador de imagen neutro donde falten imágenes. Nunca se inventan métricas ni datos de clientes.
+- Lo que falte se marca con **TODO** en comentarios HTML; un bloque sin contenido (Gallery sin imágenes, Results sin métricas) no se muestra hasta completarlo (decisión del dev, 2026-11-25). Nunca se inventan métricas ni datos de clientes.
 - Casos iniciales y datos confirmados (según CV):
 
 | Caso                           | Datos confirmados                                                                                                                                                       | TODO (los completa el dev)                                              |
