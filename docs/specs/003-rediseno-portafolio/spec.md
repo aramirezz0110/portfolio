@@ -27,18 +27,18 @@ Que el sitio presente a Arom como un perfil senior que **une Flutter con Unity y
 - **Salida:** agendar llamada en Calendly, escribir por email, descargar un CV, abrir un perfil social, un repo, un video o un caso de estudio.
 - **Reentrada:** recargar o compartir un link mantiene la página y el ancla; atrás/adelante recorre anclas y páginas visitadas.
 
-| #   | Página/sección         | Acción                                    | Lleva a                                                         | Fuente de datos |
-| --- | ---------------------- | ----------------------------------------- | --------------------------------------------------------------- | --------------- |
-| 1   | Hero                   | "View case studies"                       | Sección Case Studies                                            | —               |
-| 2   | Hero / Contact / casos | "Book a call"                             | `https://calendly.com/arommramirezz/30min` en pestaña nueva     | HTML estático   |
-| 3   | Nav                    | "Case Studies"                            | Sección Case Studies                                            | —               |
-| 4   | Case Studies (home)    | Clic en una tarjeta de caso               | Página de ese caso                                              | HTML estático   |
-| 5   | Página de caso         | "Back to portfolio" / marca del nav       | Página principal (sección Case Studies)                         | —               |
-| 6   | Projects               | Filtro All / Flutter / XR                 | Muestra solo los proyectos de esa categoría                     | HTML estático   |
-| 7   | Projects               | "Code" / "Video" / "Zoom" de una tarjeta  | Repo en GitHub / video en YouTube / imagen ampliada             | HTML estático   |
-| 8   | Projects               | "Play in browser" (oculto hoy)            | Build WebGL en itch.io en pestaña nueva                         | HTML estático   |
-| 9   | Contact                | "Download CV" (3 versiones, ocultas hoy)  | Descarga el PDF elegido                                         | PDF en el repo  |
-| 10  | Contact                | "Email me" / email / íconos sociales      | `mailto:` / perfiles en pestaña nueva                           | HTML estático   |
+| #   | Página/sección         | Acción                                   | Lleva a                                                     | Fuente de datos |
+| --- | ---------------------- | ---------------------------------------- | ----------------------------------------------------------- | --------------- |
+| 1   | Hero                   | "View case studies"                      | Sección Case Studies                                        | —               |
+| 2   | Hero / Contact / casos | "Book a call"                            | `https://calendly.com/arommramirezz/30min` en pestaña nueva | HTML estático   |
+| 3   | Nav                    | "Case Studies"                           | Sección Case Studies                                        | —               |
+| 4   | Case Studies (home)    | Clic en una tarjeta de caso              | Página de ese caso                                          | HTML estático   |
+| 5   | Página de caso         | "Back to portfolio" / marca del nav      | Página principal (sección Case Studies)                     | —               |
+| 6   | Projects               | Filtro All / Flutter / XR                | Muestra solo los proyectos de esa categoría                 | HTML estático   |
+| 7   | Projects               | "Code" / "Video" / "Zoom" de una tarjeta | Repo en GitHub / video en YouTube / imagen ampliada         | HTML estático   |
+| 8   | Projects               | "Play in browser" (oculto hoy)           | Build WebGL en itch.io en pestaña nueva                     | HTML estático   |
+| 9   | Contact                | "Download CV" (3 versiones, ocultas hoy) | Descarga el PDF elegido                                     | PDF en el repo  |
+| 10  | Contact                | "Email me" / email / íconos sociales     | `mailto:` / perfiles en pestaña nueva                       | HTML estático   |
 
 ## Páginas y estados
 
@@ -75,11 +75,11 @@ Orden de la página principal: **Hero → About → Case Studies → Experience 
 - Lo que falte se marca con **TODO** en comentarios HTML; en la página visible se muestra un marcador de imagen neutro donde falten imágenes. Nunca se inventan métricas ni datos de clientes.
 - Casos iniciales y datos confirmados (según CV):
 
-| Caso                     | Datos confirmados                                                                                                                                         | TODO (los completa el dev)                                            |
-| ------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------- |
-| Wordbox English          | Mid-Senior Unity Developer, Jun 2023 – Dec 2025; carrusel infinito, animaciones de subida de nivel, protección de rachas; 1.5M+ descargas, 125K MAU, 120+ países, 4.9/5 | Equipo, decisiones técnicas, métricas propias de cada feature, imágenes |
-| VR en Meta Quest 2 (Shokworks) | Unity XR Developer, Aug 2022 – Feb 2023; hasta 30% más de frame rate y 50% menos de carga reduciendo draw calls, reestructurando escenas y optimizando scripts | Equipo, contexto del cliente publicable, imágenes                     |
-| Fintech en Flutter (Meru) | Flutter Developer, Jun 2026 – presente; flujos de pago, pantallas dirigidas por backend, migración a arquitectura por features, sistema de diseño, feature flags | Métricas publicables, equipo, imágenes. Sin datos confidenciales     |
+| Caso                           | Datos confirmados                                                                                                                                                       | TODO (los completa el dev)                                              |
+| ------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| Wordbox English                | Mid-Senior Unity Developer, Jun 2023 – Dec 2025; carrusel infinito, animaciones de subida de nivel, protección de rachas; 1.5M+ descargas, 125K MAU, 120+ países, 4.9/5 | Equipo, decisiones técnicas, métricas propias de cada feature, imágenes |
+| VR en Meta Quest 2 (Shokworks) | Unity XR Developer, Aug 2022 – Feb 2023; hasta 30% más de frame rate y 50% menos de carga reduciendo draw calls, reestructurando escenas y optimizando scripts          | Equipo, contexto del cliente publicable, imágenes                       |
+| Fintech en Flutter (Meru)      | Flutter Developer, Jun 2026 – presente; flujos de pago, pantallas dirigidas por backend, migración a arquitectura por features, sistema de diseño, feature flags        | Métricas publicables, equipo, imágenes. Sin datos confidenciales        |
 
 ### Fase 4 — Proyecto de Flutter "In progress"
 
@@ -122,46 +122,46 @@ No aplica: contenido estático. Calendly e itch.io son enlaces externos, sin scr
 
 Los marcados con "propuesta" los redactó la IA a partir de los CV y la spec del dev; el dev los confirmó el 2026-11-25.
 
-| Ubicación                         | EN                                                                                               |
-| --------------------------------- | ------------------------------------------------------------------------------------------------ |
-| Hero, titular                     | Flutter & Unity Developer — I build mobile apps with embedded 3D, AR and VR experiences.         |
+| Ubicación                         | EN                                                                                                                |
+| --------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| Hero, titular                     | Flutter & Unity Developer — I build mobile apps with embedded 3D, AR and VR experiences.                          |
 | Hero, intro (propuesta)           | 7 years shipping mobile apps, games and XR experiences. Currently building fintech products with Flutter at Meru. |
-| Hero, botones                     | View case studies · Book a call                                                                  |
-| Nav                               | Case Studies                                                                                     |
-| Sección                           | Case Studies                                                                                     |
-| Tarjeta de caso, link             | Read case study                                                                                  |
-| Página de caso, volver            | Back to portfolio                                                                                |
-| Página de caso, bloques           | Context & problem · My role & team · Technical & design decisions · Results · Stack · Gallery    |
-| Filtro                            | All · Flutter · XR                                                                               |
-| Etiqueta Fase 4                   | In progress                                                                                      |
-| Botón Fase 5                      | Play in browser                                                                                  |
-| Servicio nuevo, título            | Flutter + Unity Integration                                                                      |
-| Servicio nuevo, texto (propuesta) | Mobile apps with embedded 3D, AR or VR modules: Flutter for the product, Unity for the immersive part. |
-| Contact, botones                  | Email me · Book a call                                                                           |
-| Contact, CV                       | Download CV: Flutter · Unity · Flutter & Unity                                                   |
+| Hero, botones                     | View case studies · Book a call                                                                                   |
+| Nav                               | Case Studies                                                                                                      |
+| Sección                           | Case Studies                                                                                                      |
+| Tarjeta de caso, link             | Read case study                                                                                                   |
+| Página de caso, volver            | Back to portfolio                                                                                                 |
+| Página de caso, bloques           | Context & problem · My role & team · Technical & design decisions · Results · Stack · Gallery                     |
+| Filtro                            | All · Flutter · XR                                                                                                |
+| Etiqueta Fase 4                   | In progress                                                                                                       |
+| Botón Fase 5                      | Play in browser                                                                                                   |
+| Servicio nuevo, título            | Flutter + Unity Integration                                                                                       |
+| Servicio nuevo, texto (propuesta) | Mobile apps with embedded 3D, AR or VR modules: Flutter for the product, Unity for the immersive part.            |
+| Contact, botones                  | Email me · Book a call                                                                                            |
+| Contact, CV                       | Download CV: Flutter · Unity · Flutter & Unity                                                                    |
 
 Textos aprobados con el plan (decisión 7, 2026-11-25):
 
-| Ubicación                  | EN                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Ubicación                  | EN                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | About, párrafo 1           | I'm a mobile developer with 7 years of experience across Flutter and Unity. I build production Flutter apps, currently payment features for a fintech platform, and I spent most of my career in Unity shipping games, VR and AR experiences with AR Foundation (ARCore on Android, ARKit on iOS), and features for a consumer app with more than 1.5 million downloads. Working in both lets me build apps that combine standard mobile flows with interactive 3D, AR or VR content. |
-| Servicio XR Development    | Immersive experiences for Meta Quest and mobile AR with AR Foundation (ARCore on Android, ARKit on iOS).                                                                                                                                                                                                                                                                                                            |
-| Skills, Unity & XR         | Unity · C# · 2D & 3D gameplay systems · AR Foundation (ARCore, ARKit) · OpenXR · Meta XR SDK · Meta Quest · Multiplayer (Photon) · Performance profiling & optimization                                                                                                                                                                                                                                             |
-| Skills, Tools (se agregan) | Spec-driven development · AGENTS.md · ADRs (architecture decision records) · Figma                                                                                                                                                                                                                                                                                                                                  |
-| Caso Wordbox, título/línea | Wordbox English — Engagement features for an English-learning app with 1.5M+ downloads.                                                                                                                                                                                                                                                                                                                             |
-| Caso VR, título/línea      | VR Training Simulation on Meta Quest 2 — Rebuilding a VR training simulation for Meta Quest 2: up to 30% higher frame rate, 50% faster loads.                                                                                                                                                                                                                                                                       |
-| Caso fintech, título/línea | Fintech App in Flutter — Payment flows, backend-driven screens and a feature-based architecture for a fintech app.                                                                                                                                                                                                                                                                                                  |
-| Tarjeta "In progress"      | Furniture AR app — Flutter handles the catalog, login and cart; an embedded Unity module with AR Foundation places products in your real space.                                                                                                                                                                                                                                                                     |
+| Servicio XR Development    | Immersive experiences for Meta Quest and mobile AR with AR Foundation (ARCore on Android, ARKit on iOS).                                                                                                                                                                                                                                                                                                                                                                              |
+| Skills, Unity & XR         | Unity · C# · 2D & 3D gameplay systems · AR Foundation (ARCore, ARKit) · OpenXR · Meta XR SDK · Meta Quest · Multiplayer (Photon) · Performance profiling & optimization                                                                                                                                                                                                                                                                                                               |
+| Skills, Tools (se agregan) | Spec-driven development · AGENTS.md · ADRs (architecture decision records) · Figma                                                                                                                                                                                                                                                                                                                                                                                                    |
+| Caso Wordbox, título/línea | Wordbox English — Engagement features for an English-learning app with 1.5M+ downloads.                                                                                                                                                                                                                                                                                                                                                                                               |
+| Caso VR, título/línea      | VR Training Simulation on Meta Quest 2 — Rebuilding a VR training simulation for Meta Quest 2: up to 30% higher frame rate, 50% faster loads.                                                                                                                                                                                                                                                                                                                                         |
+| Caso fintech, título/línea | Fintech App in Flutter — Payment flows, backend-driven screens and a feature-based architecture for a fintech app.                                                                                                                                                                                                                                                                                                                                                                    |
+| Tarjeta "In progress"      | Furniture AR app — Flutter handles the catalog, login and cart; an embedded Unity module with AR Foundation places products in your real space.                                                                                                                                                                                                                                                                                                                                       |
 
 Líneas de valor y etiquetas de las tarjetas (propuesta, basada en las descripciones actuales y el CV de Unity):
 
-| Proyecto            | Línea de valor                                                              | Etiquetas                         |
-| ------------------- | --------------------------------------------------------------------------- | --------------------------------- |
-| Furniture AR app    | See how furniture fits in your room before you buy it.                      | Flutter · Unity · AR Foundation   |
-| Multiplayer VR      | A shared 3D space where several people meet and talk in real time.          | Unity · C# · Photon · Voice chat  |
-| Sword and Pistol VR | A rhythm-style VR shooter and slicer with scoring.                          | Unity · C# · Meta Quest 2 / 3     |
-| Alejandria Punk VR  | An underwater roller coaster ride built for VR.                             | Unity · C# · Meta Quest 2 / 3     |
-| Architecture AR     | Shows 3D architectural details over real plans with augmented reality.      | Unity · C# · Vuforia              |
+| Proyecto            | Línea de valor                                                         | Etiquetas                        |
+| ------------------- | ---------------------------------------------------------------------- | -------------------------------- |
+| Furniture AR app    | See how furniture fits in your room before you buy it.                 | Flutter · Unity · AR Foundation  |
+| Multiplayer VR      | A shared 3D space where several people meet and talk in real time.     | Unity · C# · Photon · Voice chat |
+| Sword and Pistol VR | A rhythm-style VR shooter and slicer with scoring.                     | Unity · C# · Meta Quest 2 / 3    |
+| Alejandria Punk VR  | An underwater roller coaster ride built for VR.                        | Unity · C# · Meta Quest 2 / 3    |
+| Architecture AR     | Shows 3D architectural details over real plans with augmented reality. | Unity · C# · Vuforia             |
 
 ## Criterios de aceptación
 

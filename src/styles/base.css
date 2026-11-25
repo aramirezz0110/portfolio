@@ -11,7 +11,10 @@ body {
   font-size: var(--font-size-md);
   line-height: var(--line-height-body);
   color: var(--color-text);
-  background-color: var(--color-bg);
+
+  /* Transparente: el fondo con imagen lo pinta body::before (ver "Fondo fijo con imagen"). */
+  position: relative;
+  background: transparent;
 }
 
 img,
@@ -78,11 +81,6 @@ a:hover {
 }
 
 /* Fondo fijo con imagen */
-body {
-  position: relative;
-  background: transparent;
-}
-
 body::before {
   position: fixed;
   inset: 0 0 auto;

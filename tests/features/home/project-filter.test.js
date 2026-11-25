@@ -48,9 +48,7 @@ describe('initProjectFilter', () => {
     root.querySelector('[data-filter="flutter"]').click();
 
     expect(visibleTexts(root)).toEqual(['A']);
-    expect(root.querySelector('[data-filter="flutter"]').getAttribute('aria-pressed')).toBe(
-      'true',
-    );
+    expect(root.querySelector('[data-filter="flutter"]').getAttribute('aria-pressed')).toBe('true');
     expect(root.querySelector('[data-filter="all"]').getAttribute('aria-pressed')).toBe('false');
   });
 

@@ -38,26 +38,26 @@ La Fase 8 convierte las imágenes con `sips` (incluido en macOS, sin dependencia
 
 ## Archivos
 
-| Acción    | Ruta                                                    | Motivo                                                                        |
-| --------- | ------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| modificar | `index.html`                                            | Todas las fases                                                               |
-| modificar | `src/features/home/home.css`                            | Quitar bloques movidos (dec. 1); tarjeta "In progress", sección Case Studies  |
-| modificar | `src/styles/base.css`                                   | Recibe los bloques genéricos, `.tag`, `.media-placeholder` (dec. 1 y 3)       |
-| modificar | `src/features/home/home.page.js`                        | Importa `footer-year` desde `shared`                                          |
-| mover     | `src/features/home/components/footer-year.js` → `src/shared/components/footer-year.js` | Dec. 2                                         |
-| mover     | `tests/features/home/footer-year.test.js` → `tests/shared/components/footer-year.test.js` | Dec. 2                                       |
-| crear     | `src/features/case-study/case-study.page.js`            | Entrada de las páginas de caso (solo `initFooterYear`)                        |
-| crear     | `src/features/case-study/case-study.css`                | Layout de los 6 bloques, galería, CTA                                         |
-| crear     | `pages/case-study-wordbox.html`                         | Caso 1                                                                        |
-| crear     | `pages/case-study-meta-quest-vr.html`                   | Caso 2                                                                        |
-| crear     | `pages/case-study-fintech-flutter.html`                 | Caso 3                                                                        |
-| crear     | `docs/ai/case-study-template.md`                        | Plantilla reutilizable (dec. 5)                                               |
-| modificar | `docs/ai/README.md`                                     | Enlazar la plantilla                                                          |
-| crear     | `assets/cv/.gitkeep`                                    | Carpeta para los PDF (aprobada en la spec)                                    |
-| modificar | `docs/ai/architecture.md`                               | Agregar `assets/cv/` a la lista cerrada                                       |
-| borrar    | 11 imágenes en `assets/img/portfolio/`                  | Proyectos retirados (spec Fase 2)                                             |
-| crear     | `*.webp` de las imágenes que quedan, `bg3.webp`         | Fase 8; se borran los PNG/JPG reemplazados                                    |
-| conservar | `assets/img/me2.jpg`                                    | `og:image` y `apple-touch-icon` (WebP tiene soporte irregular en previews)    |
+| Acción    | Ruta                                                                                      | Motivo                                                                       |
+| --------- | ----------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| modificar | `index.html`                                                                              | Todas las fases                                                              |
+| modificar | `src/features/home/home.css`                                                              | Quitar bloques movidos (dec. 1); tarjeta "In progress", sección Case Studies |
+| modificar | `src/styles/base.css`                                                                     | Recibe los bloques genéricos, `.tag`, `.media-placeholder` (dec. 1 y 3)      |
+| modificar | `src/features/home/home.page.js`                                                          | Importa `footer-year` desde `shared`                                         |
+| mover     | `src/features/home/components/footer-year.js` → `src/shared/components/footer-year.js`    | Dec. 2                                                                       |
+| mover     | `tests/features/home/footer-year.test.js` → `tests/shared/components/footer-year.test.js` | Dec. 2                                                                       |
+| crear     | `src/features/case-study/case-study.page.js`                                              | Entrada de las páginas de caso (solo `initFooterYear`)                       |
+| crear     | `src/features/case-study/case-study.css`                                                  | Layout de los 6 bloques, galería, CTA                                        |
+| crear     | `pages/case-study-wordbox.html`                                                           | Caso 1                                                                       |
+| crear     | `pages/case-study-meta-quest-vr.html`                                                     | Caso 2                                                                       |
+| crear     | `pages/case-study-fintech-flutter.html`                                                   | Caso 3                                                                       |
+| crear     | `docs/ai/case-study-template.md`                                                          | Plantilla reutilizable (dec. 5)                                              |
+| modificar | `docs/ai/README.md`                                                                       | Enlazar la plantilla                                                         |
+| crear     | `assets/cv/.gitkeep`                                                                      | Carpeta para los PDF (aprobada en la spec)                                   |
+| modificar | `docs/ai/architecture.md`                                                                 | Agregar `assets/cv/` a la lista cerrada                                      |
+| borrar    | 11 imágenes en `assets/img/portfolio/`                                                    | Proyectos retirados (spec Fase 2)                                            |
+| crear     | `*.webp` de las imágenes que quedan, `bg3.webp`                                           | Fase 8; se borran los PNG/JPG reemplazados                                   |
+| conservar | `assets/img/me2.jpg`                                                                      | `og:image` y `apple-touch-icon` (WebP tiene soporte irregular en previews)   |
 
 ## UI
 
@@ -109,11 +109,11 @@ Contenido estático en HTML. Calendly e itch.io son enlaces externos.
 
 ## Tests
 
-| Archivo de test                                 | Qué cubre                                                        |
-| ----------------------------------------------- | ---------------------------------------------------------------- |
-| `tests/shared/components/footer-year.test.js`   | El mismo test, en su nueva ruta                                  |
-| `tests/features/home/project-filter.test.js`    | Fixture con categorías `flutter` / `xr` y una tarjeta con ambas  |
-| `tests/features/home/state.test.js`             | Sin cambios (la lógica no cambia)                                |
+| Archivo de test                               | Qué cubre                                                       |
+| --------------------------------------------- | --------------------------------------------------------------- |
+| `tests/shared/components/footer-year.test.js` | El mismo test, en su nueva ruta                                 |
+| `tests/features/home/project-filter.test.js`  | Fixture con categorías `flutter` / `xr` y una tarjeta con ambas |
+| `tests/features/home/state.test.js`           | Sin cambios (la lógica no cambia)                               |
 
 No hay lógica nueva: el resto se verifica a mano (responsive, teclado, enlaces) en `/verify`.
 
