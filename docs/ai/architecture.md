@@ -10,6 +10,7 @@ Nadie (persona o IA) crea carpetas fuera de esta lista sin aprobación del dev. 
 /                          index.html y páginas legado; configs; AGENTS.md, CLAUDE.md
 pages/                     páginas nuevas: pages/<nombre>.html
 assets/img/                imágenes (nuevas en kebab-case)
+assets/cv/                 CV en PDF que enlaza la sección Contact (spec 003)
 assets/vendor/             librerías de terceros copiadas (no se editan)
 scripts/                   scripts de Node para tooling (hooks); nunca código del sitio
 src/core/                  config, http, logger, store base, theme-init

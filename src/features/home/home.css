@@ -390,6 +390,28 @@
   margin-bottom: var(--space-4);
 }
 
+.contact__actions,
+.contact__cv {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  align-items: center;
+}
+
+.contact__cv {
+  margin-top: var(--space-4);
+}
+
+.contact__cv[hidden] {
+  display: none;
+}
+
+.contact__intro .contact__cv-label {
+  margin: 0;
+  font-family: var(--font-ui);
+  font-weight: var(--font-weight-semibold);
+}
+
 .contact-card {
   width: 100%;
   padding: 20px;
