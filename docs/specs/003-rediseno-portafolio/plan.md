@@ -173,3 +173,5 @@ Cada fase termina con `npm run check`, un resumen al dev y un mensaje de commit 
 ## Desvíos
 
 <!-- Cambios respecto al plan aprobado: qué, por qué, aprobado el AAAA-MM-DD. -->
+
+- **T2 (Fase 1):** `.hero__title span` pasa de `border-bottom` a `text-decoration: underline` en `home.css`. Con el titular nuevo en dos o más líneas, el borde pisaba la línea siguiente en móvil. Solo "Flutter & Unity Developer" va subrayado; el resto del titular sigue en texto normal. Pendiente de aprobación del dev.

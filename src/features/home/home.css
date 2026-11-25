@@ -223,9 +223,10 @@ main > section {
   color: var(--color-text);
 }
 
+/* Subrayado (no borde) para que no pise la segunda línea cuando el titular se parte. */
 .hero__title span {
-  padding-bottom: 6px;
-  border-bottom: 2px solid var(--color-accent);
+  text-decoration: underline 2px var(--color-accent);
+  text-underline-offset: 6px;
 }
 
 .hero__intro {
