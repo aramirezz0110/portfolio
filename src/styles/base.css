@@ -89,7 +89,7 @@ body::before {
   z-index: -1;
   height: 100vh;
   content: '';
-  background: var(--color-bg) url('../../assets/img/bg3.png') top right no-repeat;
+  background: var(--color-bg) url('../../assets/img/bg3.jpg') top right no-repeat;
   background-size: cover;
 }
 
