@@ -1,0 +1,75 @@
+/*
+ * Feature case-study (pages/case-study-*.html): una columna de lectura con los 6 bloques de la
+ * plantilla (docs/ai/case-study-template.md). Barra, footer, paneles y botones: src/styles/base.css.
+ */
+
+.case-study {
+  padding: var(--space-6) 0;
+}
+
+/* Desde 992px la barra es fija: el contenido arranca debajo. */
+@media (width >= 992px) {
+  .case-study {
+    padding-top: calc(72px + var(--space-6));
+  }
+}
+
+.case-study__body {
+  max-width: 760px;
+  margin-inline: auto;
+}
+
+.case-study__title {
+  margin: 0 0 var(--space-3);
+  font-family: var(--font-ui);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+  color: var(--color-text);
+}
+
+.case-study__summary {
+  margin-bottom: var(--space-4);
+  font-size: var(--font-size-lg);
+  color: var(--color-text-muted);
+}
+
+.case-study__block {
+  margin-top: var(--space-12);
+}
+
+/* Los títulos de bloque son más largos que los de la home: en móvil la línea decorativa se
+   montaba sobre el texto. */
+.case-study__block .section-heading__title {
+  line-height: 1.4;
+}
+
+@media (width <= 575.98px) {
+  .case-study__block .section-heading__title::after {
+    display: none;
+  }
+}
+
+.case-study__block ul {
+  padding-left: var(--space-6);
+}
+
+.case-study__block li {
+  padding-bottom: var(--space-2);
+}
+
+.case-study__gallery {
+  display: grid;
+  gap: var(--space-4);
+}
+
+@media (width >= 768px) {
+  .case-study__gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.case-study__cta {
+  margin-top: var(--space-12);
+  text-align: center;
+}

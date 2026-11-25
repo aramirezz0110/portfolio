@@ -1,4 +1,4 @@
-import { initFooterYear } from './components/footer-year.js';
+import { initFooterYear } from '../../shared/components/footer-year.js';
 import { initProjectFilter } from './components/project-filter.js';
 import { initSiteNav } from './components/site-nav.js';
 

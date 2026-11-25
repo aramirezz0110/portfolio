@@ -12,6 +12,7 @@ Documentación para cualquier persona o IA que trabaje en este repo. `AGENTS.md`
 | [i18n.md](i18n.md)                                   | Idiomas (inglés por defecto, español opcional)                    |
 | [testing.md](testing.md)                             | Qué se testea y cómo                                              |
 | [new-feature-checklist.md](new-feature-checklist.md) | Checklist para un feature nuevo                                   |
+| [case-study-template.md](case-study-template.md)     | Plantilla y reglas para una página de caso de estudio             |
 
 ## Workflows (procedimientos de los slash commands)
 

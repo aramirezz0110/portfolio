@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { initFooterYear } from '../../../src/features/home/components/footer-year.js';
+import { initFooterYear } from '../../../src/shared/components/footer-year.js';
 
 describe('initFooterYear', () => {
   it('escribe el año de la fecha dada', () => {

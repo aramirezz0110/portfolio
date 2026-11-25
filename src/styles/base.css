@@ -65,6 +65,257 @@ a:hover {
   border: 0;
 }
 
+/*
+ * Layout compartido por todas las páginas: fondo, paneles de sección, encabezados, barra fija,
+ * botones y footer. Movido desde home.css en la spec 003.
+ */
+
+/* Scroll continuo */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Fondo fijo con imagen */
+body {
+  position: relative;
+  background: transparent;
+}
+
+body::before {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: -1;
+  height: 100vh;
+  content: '';
+  background: var(--color-bg) url('../../assets/img/bg3.png') top right no-repeat;
+  background-size: cover;
+}
+
+@media (width >= 1024px) {
+  body::before {
+    background-attachment: fixed;
+  }
+}
+
+main > section {
+  padding: var(--space-6) 0;
+  scroll-margin-top: 72px;
+}
+
+/* Panel detrás del contenido de cada sección */
+.section-panel {
+  padding: 30px;
+  background: var(--color-overlay);
+}
+
+.section-panel--transparent {
+  background: transparent;
+}
+
+/* Encabezado de sección */
+.section-heading__title {
+  padding: 0;
+  margin: 0 0 20px;
+  font-family: var(--font-ui);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  line-height: 1px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--color-text-muted);
+}
+
+.section-heading__title::after {
+  display: inline-block;
+  width: 120px;
+  height: 1px;
+  margin: var(--space-1) 10px;
+  content: '';
+  background: var(--color-accent);
+}
+
+/* Barra fija */
+.site-header {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 997;
+  background: var(--color-overlay);
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  min-height: 72px;
+}
+
+.site-header__brand,
+.site-header__brand:hover {
+  font-family: var(--font-ui);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text);
+  white-space: nowrap;
+}
+
+.site-header__toggle {
+  display: none;
+  padding: var(--space-1);
+  font-size: 28px;
+  line-height: 0;
+  color: var(--color-text);
+  background: transparent;
+  border: 0;
+}
+
+.site-header__toggle[aria-expanded='true'] .site-header__icon--open,
+.site-header__toggle[aria-expanded='false'] .site-header__icon--close {
+  display: none;
+}
+
+.site-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-6);
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.site-nav a {
+  position: relative;
+  font-family: var(--font-ui);
+  font-size: var(--font-size-md);
+  color: var(--color-text-muted);
+  white-space: nowrap;
+  transition: color var(--duration-base);
+}
+
+.site-nav a::before {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  content: '';
+  background-color: var(--color-accent);
+  transition: width var(--duration-base);
+}
+
+.site-nav a:hover,
+.site-nav a[aria-current='true'] {
+  color: var(--color-text);
+}
+
+.site-nav a:hover::before,
+.site-nav a[aria-current='true']::before {
+  width: 25px;
+}
+
+@media (width <= 991.98px) {
+  main > section {
+    scroll-margin-top: 60px;
+  }
+
+  .site-header__inner {
+    min-height: 60px;
+  }
+
+  /* Sin JS: la barra no es fija y el menú se ve como lista. */
+  .site-header:not([data-enhanced]) {
+    position: static;
+  }
+
+  .site-header:not([data-enhanced]) .site-header__inner {
+    flex-wrap: wrap;
+    padding-block: var(--space-3);
+  }
+
+  .site-header[data-enhanced] .site-header__toggle {
+    display: block;
+  }
+
+  .site-header[data-enhanced] .site-nav {
+    display: none;
+  }
+
+  .site-header--open[data-enhanced] .site-nav {
+    position: fixed;
+    inset: 60px 0 0;
+    display: block;
+    padding: var(--space-4);
+    background: var(--color-overlay);
+  }
+
+  .site-header--open .site-nav ul {
+    flex-direction: column;
+    gap: 0;
+    padding: var(--space-2) 0;
+    border: 2px solid var(--color-border);
+  }
+
+  .site-header--open .site-nav a {
+    display: block;
+    padding: var(--space-3) var(--space-6);
+  }
+
+  .site-header--open .site-nav a::before {
+    display: none;
+  }
+}
+
+/* Botones */
+.button {
+  display: inline-block;
+  padding: var(--space-3) var(--space-6);
+  font-family: var(--font-ui);
+  font-weight: var(--font-weight-semibold);
+  text-align: center;
+  color: var(--color-on-accent);
+  background: var(--color-accent);
+  border: 0;
+  border-radius: var(--radius-sm);
+  transition: background var(--duration-base);
+}
+
+.button:hover {
+  color: var(--color-on-accent);
+  background: var(--color-accent-hover);
+}
+
+.button--secondary {
+  color: var(--color-text);
+  background: var(--color-surface);
+}
+
+.button--secondary:hover {
+  color: var(--color-text);
+  background: var(--color-border);
+}
+
+/* Footer */
+.site-footer {
+  padding: var(--space-4) 0;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  background: var(--color-overlay);
+}
+
+.site-footer__inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-4);
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-footer__inner p {
+  margin: 0;
+}
+
 /* Etiquetas de stack (home y casos de estudio) */
 .tag-list {
   display: flex;
@@ -82,6 +333,14 @@ a:hover {
   color: var(--color-text-muted);
   background: var(--color-surface);
   border-radius: var(--radius-pill);
+}
+
+/* Marcador neutro donde todavía no hay imagen (decorativo: aria-hidden en el HTML) */
+.media-placeholder {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: var(--color-surface);
+  border: 1px dashed var(--color-border);
 }
 
 @media (prefers-reduced-motion: reduce) {
